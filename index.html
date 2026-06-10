@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0E0D0B" />
+<title>Stub — Catch every tax deduction</title>
+<meta name="description" content="AI receipt scanner & tax deduction tracker for the self-employed. Snap any receipt, find the deduction. $79/year. 7-day free trial." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Stub — Catch every tax deduction" />
+<meta property="og:description" content="AI receipt scanner for the self-employed. Snap any receipt, AI finds the deduction." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://stub.evdiag.net/og-image.png" />
+
+<link rel="icon" type="image/png" href="icon-192.png" />
+<link rel="apple-touch-icon" href="icon-180.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #0E0D0B;
+    --surface: #1A1817;
+    --surface-2: #26221F;
+    --cream: #F4EDE2;
+    --muted: #8B8278;
+    --gold: #D4A574;
+    --sage: #7FC59B;
+    --border: #2A2521;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--cream); font-family: 'Geist', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  body { overflow-x: hidden; }
+  a { color: var(--gold); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
+
+  header { padding: 28px 0; }
+  .nav { display: flex; align-items: center; justify-content: space-between; }
+  .brand { display: flex; align-items: center; gap: 10px; }
+  .brand-mark {
+    width: 36px; height: 36px; background: var(--gold);
+    border-radius: 9px; display: flex; align-items: center; justify-content: center;
+    font-family: 'Instrument Serif'; color: var(--bg); font-size: 26px; font-weight: 400;
+    line-height: 1;
+  }
+  .brand-text { font-weight: 600; font-size: 18px; }
+
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { color: var(--muted); font-size: 14px; }
+  .nav-links a.btn { color: var(--bg); background: var(--cream); padding: 10px 18px; border-radius: 999px; font-weight: 600; }
+
+  /* Hero */
+  .hero { padding: 60px 0 100px; position: relative; }
+  .hero::before {
+    content: '';
+    position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+    width: 900px; height: 900px;
+    background: radial-gradient(circle, rgba(212,165,116,0.1) 0%, transparent 60%);
+    z-index: -1;
+    pointer-events: none;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; align-items: center; }
+  @media (max-width: 800px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 30px; }
+  }
+  h1 {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-size: 88px;
+    line-height: 0.96;
+    letter-spacing: -0.025em;
+  }
+  h1 em { color: var(--gold); font-style: italic; }
+  @media (max-width: 800px) { h1 { font-size: 56px; } }
+
+  .lede {
+    font-size: 19px; line-height: 1.5;
+    color: rgba(244,237,226,0.7);
+    margin-top: 28px;
+    max-width: 520px;
+  }
+  .lede strong { color: var(--cream); }
+
+  .ctas { display: flex; gap: 12px; margin-top: 36px; flex-wrap: wrap; }
+  .cta {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 22px;
+    border-radius: 999px;
+    font-size: 14px; font-weight: 600;
+    text-decoration: none;
+    transition: transform .15s;
+  }
+  .cta:hover { transform: translateY(-1px); text-decoration: none; }
+  .cta.gold { background: var(--gold); color: var(--bg); }
+  .cta.outline { background: transparent; color: var(--cream); border: 1.5px solid var(--border); }
+
+  .badges { display: flex; gap: 16px; margin-top: 24px; flex-wrap: wrap; }
+  .badge { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+
+  /* Phone preview */
+  .phone-preview {
+    width: 320px; height: 660px;
+    background: var(--bg);
+    border: 4px solid var(--border);
+    border-radius: 50px;
+    margin: 0 auto;
+    box-shadow: 0 60px 140px rgba(212,165,116,0.18), 0 30px 60px rgba(0,0,0,0.5);
+    overflow: hidden;
+    position: relative;
+  }
+  .notch {
+    position: absolute; top: 14px; left: 50%; transform: translateX(-50%);
+    width: 90px; height: 22px; background: black; border-radius: 30px; z-index: 5;
+  }
+  .phone-screen { padding: 60px 16px 0; }
+  .phone-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 24px; padding: 24px; position: relative; overflow: hidden;
+  }
+  .phone-card::before {
+    content: ''; position: absolute; top: -50px; right: -50px;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, rgba(212,165,116,0.25) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .phone-label { color: var(--gold); font-size: 9px; letter-spacing: 0.15em; font-weight: 600; }
+  .phone-amount {
+    font-family: 'Instrument Serif'; font-size: 60px;
+    margin-top: 6px; line-height: 1; letter-spacing: -0.02em;
+  }
+  .phone-amount .small { font-size: 18px; color: var(--muted); }
+  .phone-sub { color: rgba(244,237,226,0.6); font-size: 13px; margin-top: 4px; }
+  .phone-divider { height: 1px; background: var(--border); margin: 16px 0; }
+  .phone-stat { font-size: 12px; }
+  .phone-stat-label { color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; font-size: 9px; margin-bottom: 2px; }
+  .phone-stat-val { color: var(--cream); font-weight: 700; font-size: 14px; }
+  .phone-stat-val.green { color: var(--sage); }
+  .phone-row {
+    margin-top: 12px; padding: 12px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .phone-row .name { font-size: 13px; font-weight: 500; }
+  .phone-row .cat { font-size: 10px; color: var(--muted); margin-top: 2px; }
+  .phone-row .amt { font-size: 13px; font-weight: 600; }
+  .phone-row .stat { font-size: 8px; color: var(--sage); letter-spacing: 0.1em; text-align: right; margin-top: 2px; }
+
+  /* Stats strip */
+  .stats { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 50px 0; }
+  .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center; }
+  @media (max-width: 700px) { .stats-grid { grid-template-columns: 1fr; } }
+  .stat-num { font-family: 'Instrument Serif'; font-size: 60px; line-height: 1; color: var(--gold); }
+  .stat-text { color: rgba(244,237,226,0.7); font-size: 14px; margin-top: 8px; }
+
+  /* Features */
+  .features { padding: 100px 0; }
+  .section-eyebrow { color: var(--gold); font-size: 12px; letter-spacing: 0.15em; font-weight: 600; }
+  .section-title {
+    font-family: 'Instrument Serif'; font-size: 56px; line-height: 1; letter-spacing: -0.02em;
+    margin-top: 14px; max-width: 700px;
+  }
+  .section-title em { color: var(--gold); font-style: italic; }
+
+  .feat-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px;
+  }
+  @media (max-width: 850px) { .feat-grid { grid-template-columns: 1fr; } }
+  .feat-card {
+    padding: 32px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+  }
+  .feat-icon { width: 40px; height: 40px; background: var(--surface-2); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--gold); margin-bottom: 20px; }
+  .feat-title { font-size: 19px; font-weight: 600; }
+  .feat-text { font-size: 14px; color: rgba(244,237,226,0.65); margin-top: 8px; line-height: 1.5; }
+
+  /* Pricing */
+  .pricing { padding: 100px 0; }
+  .price-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 50px; align-items: end;
+  }
+  @media (max-width: 800px) { .price-grid { grid-template-columns: 1fr; } }
+  .price-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 32px;
+    position: relative;
+  }
+  .price-card.best { border-color: var(--gold); transform: scale(1.03); }
+  @media (max-width: 800px) { .price-card.best { transform: none; } }
+  .price-card.best::before {
+    content: 'BEST VALUE';
+    position: absolute; top: -12px; left: 24px;
+    background: var(--gold); color: var(--bg);
+    font-size: 10px; font-weight: 700; letter-spacing: 0.15em;
+    padding: 4px 10px; border-radius: 999px;
+  }
+  .price-name { font-size: 16px; font-weight: 600; }
+  .price-amount { font-family: 'Instrument Serif'; font-size: 56px; margin-top: 14px; line-height: 1; }
+  .price-amount .per { font-size: 18px; color: var(--muted); margin-left: 4px; }
+  .price-sub { font-size: 13px; color: var(--muted); margin-top: 6px; }
+  .price-list { margin-top: 24px; }
+  .price-feat { display: flex; gap: 8px; margin-bottom: 8px; font-size: 13px; color: rgba(244,237,226,0.85); }
+  .price-feat .check { color: var(--sage); }
+
+  /* FAQ */
+  .faq { padding: 100px 0; }
+  .faq-grid { margin-top: 50px; max-width: 760px; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 24px 0; }
+  .faq-q { font-size: 17px; font-weight: 600; }
+  .faq-a { color: rgba(244,237,226,0.7); font-size: 14px; margin-top: 8px; line-height: 1.6; }
+
+  /* Footer */
+  footer { padding: 60px 0 80px; border-top: 1px solid var(--border); margin-top: 40px; }
+  .foot-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; }
+  .foot-links { display: flex; gap: 24px; flex-wrap: wrap; }
+  .foot-links a { color: var(--muted); font-size: 13px; }
+
+  /* Privacy policy section (anchor target) */
+  .legal { padding: 80px 0; max-width: 760px; }
+  .legal h1 { font-size: 56px; }
+  .legal h2 { font-size: 22px; margin: 36px 0 12px; font-weight: 600; }
+  .legal h3 { font-size: 16px; margin: 24px 0 8px; font-weight: 600; }
+  .legal p { font-size: 15px; line-height: 1.7; color: rgba(244,237,226,0.8); margin-bottom: 14px; }
+  .legal ul { margin-left: 24px; margin-bottom: 16px; color: rgba(244,237,226,0.8); }
+  .legal li { font-size: 15px; line-height: 1.7; margin-bottom: 6px; }
+  .legal hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- HOMEPAGE                                                      -->
+<!-- ============================================================ -->
+<div id="home">
+
+<header>
+  <div class="container nav">
+    <div class="brand"><div class="brand-mark">s</div><span class="brand-text">stub.</span></div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#download" class="btn">Download</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Catch every<br><em>tax deduction.</em></h1>
+      <p class="lede">
+        Snap any receipt. AI extracts it in two seconds and maps it to the right Schedule C line.
+        Self-employed users find <strong>$1,200+</strong> in extra deductions every year.
+      </p>
+      <div class="ctas" id="download">
+        <a href="https://apps.apple.com/app/id6778758310" class="cta gold">Download for iPhone →</a>
+        <a href="https://play.google.com/store/apps/details?id=com.stubx.app" class="cta outline">Download for Android</a>
+      </div>
+      <div class="badges">
+        <div class="badge">✓ Free for 15 scans/month</div>
+        <div class="badge">✓ 7-day free trial on Pro</div>
+        <div class="badge">✓ Cancel anytime</div>
+      </div>
+    </div>
+    <div>
+      <div class="phone-preview">
+        <div class="notch"></div>
+        <div class="phone-screen">
+          <div class="phone-card">
+            <div class="phone-label">✦ FOUND THIS YEAR</div>
+            <div class="phone-amount"><span class="small">$</span>1,847<span class="small">.42</span></div>
+            <div class="phone-sub">in deductible expenses</div>
+            <div class="phone-divider"></div>
+            <div style="display: flex; justify-content: space-between;">
+              <div class="phone-stat">
+                <div class="phone-stat-label">EST. SAVINGS</div>
+                <div class="phone-stat-val green">≈ $443</div>
+              </div>
+              <div class="phone-stat" style="text-align: right;">
+                <div class="phone-stat-label">RECEIPTS</div>
+                <div class="phone-stat-val">📃 147</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="phone-row">
+            <div>
+              <div class="name">Office Depot</div>
+              <div class="cat">Office Supplies · Today</div>
+            </div>
+            <div>
+              <div class="amt">$47.32</div>
+              <div class="stat">DEDUCTIBLE</div>
+            </div>
+          </div>
+          <div class="phone-row">
+            <div>
+              <div class="name">Shell</div>
+              <div class="cat">Vehicle — Fuel</div>
+            </div>
+            <div>
+              <div class="amt">$62.15</div>
+              <div class="stat">DEDUCTIBLE</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stats-grid">
+    <div>
+      <div class="stat-num">2 sec</div>
+      <div class="stat-text">to extract a receipt</div>
+    </div>
+    <div>
+      <div class="stat-num">$1,200+</div>
+      <div class="stat-text">avg extra deductions found / yr</div>
+    </div>
+    <div>
+      <div class="stat-num">$79/yr</div>
+      <div class="stat-text">Pro · pays for itself in 1 receipt</div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="container">
+    <div class="section-eyebrow">HOW IT WORKS</div>
+    <h2 class="section-title">Built for the way you actually <em>work.</em></h2>
+
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-icon">📷</div>
+        <div class="feat-title">Snap, don't sort</div>
+        <div class="feat-text">Point your camera at any receipt — crumpled, faded, in any language. AI extracts vendor, amount, and items in two seconds.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">✦</div>
+        <div class="feat-title">Mapped to Schedule C</div>
+        <div class="feat-text">Every expense is auto-mapped to the right IRS Schedule C line, with a confidence score so you know what to double-check.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">📍</div>
+        <div class="feat-title">Mileage tracks itself</div>
+        <div class="feat-text">Auto-detect business trips. Standard mileage rate, business vs personal classification, all logged.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">📤</div>
+        <div class="feat-title">Accountant-ready exports</div>
+        <div class="feat-text">PDF or CSV. Sync to TurboTax or H&amp;R Block in one tap. Your CPA will say "finally."</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🔒</div>
+        <div class="feat-title">Privacy by default</div>
+        <div class="feat-text">Receipts stay on your device. We never sell your data. Period.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">⚡</div>
+        <div class="feat-title">No bloat</div>
+        <div class="feat-text">Built by a one-person team for one-person businesses. No "enterprise dashboard." Just the tool you actually need.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-eyebrow">PRICING</div>
+    <h2 class="section-title">Pays for itself in <em>one receipt.</em></h2>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-name">Free</div>
+        <div class="price-amount">$0</div>
+        <div class="price-sub">15 scans / month</div>
+        <div class="price-list">
+          <div class="price-feat"><span class="check">✓</span> AI receipt extraction</div>
+          <div class="price-feat"><span class="check">✓</span> Basic categorization</div>
+          <div class="price-feat"><span class="check">✓</span> Local storage</div>
+        </div>
+      </div>
+
+      <div class="price-card best">
+        <div class="price-name">Pro Annual</div>
+        <div class="price-amount">$79<span class="per">/year</span></div>
+        <div class="price-sub">$6.58/mo · Save 45%</div>
+        <div class="price-list">
+          <div class="price-feat"><span class="check">✓</span> Unlimited scans</div>
+          <div class="price-feat"><span class="check">✓</span> AI deduction insights</div>
+          <div class="price-feat"><span class="check">✓</span> Auto mileage tracking</div>
+          <div class="price-feat"><span class="check">✓</span> Schedule C / tax export</div>
+          <div class="price-feat"><span class="check">✓</span> TurboTax + H&amp;R Block sync</div>
+          <div class="price-feat"><span class="check">✓</span> Priority support</div>
+        </div>
+      </div>
+
+      <div class="price-card">
+        <div class="price-name">Business</div>
+        <div class="price-amount">$19.99<span class="per">/mo</span></div>
+        <div class="price-sub">Multiple businesses</div>
+        <div class="price-list">
+          <div class="price-feat"><span class="check">✓</span> Everything in Pro</div>
+          <div class="price-feat"><span class="check">✓</span> Multiple businesses</div>
+          <div class="price-feat"><span class="check">✓</span> Accountant share access</div>
+          <div class="price-feat"><span class="check">✓</span> Receipt email forwarding</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="section-eyebrow">QUESTIONS</div>
+    <h2 class="section-title">A few <em>things.</em></h2>
+
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">How does the AI extraction work?</div>
+        <div class="faq-a">When you scan a receipt, the image is sent to a secure AI vision model that reads the vendor, amount, items, and date, then maps it to the right tax category. The whole thing takes about 2 seconds. The image isn't stored on our servers — once the structured data comes back, that's the end of it.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Will this hold up if I get audited?</div>
+        <div class="faq-a">Yes. The IRS accepts digital receipts as long as they show vendor, date, and amount — which Stub captures and stores per receipt. You can export everything to PDF/CSV at year-end for your records.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does this replace my accountant?</div>
+        <div class="faq-a">No, and we don't pretend to. Stub is the part that *was* taking your accountant six hours and $400 to do (sorting and categorizing). Your CPA still files. They'll just be much happier when they open your file.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if I'm not in the US?</div>
+        <div class="faq-a">Stub works for anyone tracking business expenses, but the auto-mapping is currently US-Schedule-C-specific. We're adding UK Self Assessment and Canadian T2125 support in a future update.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I cancel anytime?</div>
+        <div class="faq-a">Yes. Cancel from your App Store or Play Store subscriptions page. Your data stays on your device — you keep all your past receipts even after canceling.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Who built this?</div>
+        <div class="faq-a">A one-person team. Stub is built by an indie developer because the existing tools (Expensify, QuickBooks, Stride) are built for businesses with employees, not for one-person operations with a phone in their car.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container foot-grid">
+    <div class="brand">
+      <div class="brand-mark">s</div>
+      <span class="brand-text">stub.</span>
+    </div>
+    <div class="foot-links">
+      <a href="#privacy">Privacy</a>
+      <a href="#privacy">Terms</a>
+      <a href="mailto:youremail@gmail.com">Support</a>
+      <a href="https://apps.apple.com/app/id6778758310">App Store</a>
+      <a href="https://play.google.com/store/apps/details?id=com.stubx.app">Google Play</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<!-- ============================================================ -->
+<!-- PRIVACY POLICY (anchor target #privacy)                       -->
+<!-- ============================================================ -->
+<section id="privacy" class="legal" style="margin: 0 auto; padding: 80px 28px;">
+
+<h1 style="font-family: 'Instrument Serif'; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 16px;">Privacy Policy</h1>
+<p style="color: var(--muted); margin-bottom: 40px;">Effective date: <strong>10.06.2026</strong></p>
+
+<p>This Privacy Policy explains how Stub ("we," "us," "the app") handles your information. The short version: most of your data stays on your device, we don't sell anything to anyone, and we only collect what we need to make the app work.</p>
+
+<p>If you have any question that isn't answered here, email <a href="mailto:youremail@gmail.com">youremail@gmail.com</a>.</p>
+
+<h2>1. What Stub does</h2>
+<p>Stub is a receipt-scanning and tax-tracking app for self-employed people. You point your camera at a receipt, the app uses AI to read it, and it stores the extracted data so you can use it for tax deductions.</p>
+
+<h2>2. Information stored on your device</h2>
+<p>The following is stored <strong>locally on your device only</strong> and is never sent to us:</p>
+<ul>
+  <li>Receipts you scan (image, vendor, amount, date, items, category, notes)</li>
+  <li>Mileage entries you log</li>
+  <li>Onboarding state and app settings</li>
+</ul>
+<p>You can delete all of this at any time from within the app, or by uninstalling Stub.</p>
+
+<h2>3. Information sent to third parties when you use AI features</h2>
+<p>When you scan a receipt, Stub sends the receipt image to a third-party AI provider (Anthropic) to extract the vendor, amount, items, and tax category. The image is processed and a structured response is returned. Anthropic does not retain your receipt images for training purposes. You can read Anthropic's policy at <a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a>.</p>
+
+<p>We do not store the receipt image on our servers. The image leaves your device, is processed by the AI, the structured result returns to your device, and that's the end of it.</p>
+
+<h2>4. Subscriptions and payments</h2>
+<p>When you start a Stub Pro subscription, payment is processed by <strong>Apple</strong> (App Store) or <strong>Google</strong> (Play Store). We never see your credit card number or full billing details.</p>
+<p>We use <strong>RevenueCat</strong> to manage subscription states. RevenueCat's privacy policy: <a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a>.</p>
+
+<h2>5. Information we do NOT collect</h2>
+<p>For clarity, we do <strong>not</strong> collect any of the following:</p>
+<ul>
+  <li>Your name (unless you voluntarily enter one in the app)</li>
+  <li>Your email (unless you voluntarily contact support)</li>
+  <li>Your phone number, contacts, photos outside of receipts you scan, calendar, or other device data</li>
+  <li>Your precise location (we request location for mileage tracking, but this is processed locally and never sent off-device)</li>
+</ul>
+
+<h2>6. Your rights</h2>
+<p>You have the right to access, delete, export, or object to processing of your data. To exercise any of these rights, email <a href="mailto:youremail@gmail.com">youremail@gmail.com</a> with the subject line "Privacy Request."</p>
+
+<h2>7. Children's privacy</h2>
+<p>Stub is not directed at children under 13 (or under 16 in EEA/UK). We do not knowingly collect data from children.</p>
+
+<h2>8. International users</h2>
+<p>If you are located outside the United States, your data (such as receipt images sent for AI processing) may be transferred to and processed in the United States. By using Stub, you consent to this transfer.</p>
+
+<h2>9. Changes to this policy</h2>
+<p>If we change this policy, we'll update the "Effective date" above. If the change is material, we'll notify you in-app before the change takes effect.</p>
+
+<h2>10. Contact</h2>
+<p>Stub is built and operated by <strong>Roman Lastname</strong>.</p>
+<p>Email: <a href="mailto:youremail@gmail.com">youremail@gmail.com</a></p>
+
+<hr>
+
+<p style="color: var(--muted); font-size: 13px;">By using Stub, you consent to this Privacy Policy.</p>
+
+</section>
+
+</body>
+</html>
