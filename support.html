@@ -121,5 +121,82 @@
 
   <p class="disclaimer">stub. — AI receipt scanner &amp; deduction tracker for the self-employed. <a href="index.html">Home</a> · <a href="guides.html">Tax guides</a> · <a href="index.html#privacy">Privacy policy</a></p>
 </div>
+
+<!-- ============================================================================
+     STUB FEEDBACK SECTION  —  paste this whole block inside the <body> of
+     support.html (a good spot is just before the closing </body> or footer).
+     One thing to change: endpoint below is already set to your Formspree form (xojzzwzy). No edit needed —
+     just paste this block in.
+     The class names are namespaced (stub-fb__*) so they won't clash with the page.
+============================================================================ -->
+<section id="feedback" class="stub-fb">
+  <h2 class="stub-fb__title">Send us feedback</h2>
+  <p class="stub-fb__sub">Found a bug, or have an idea to make Stub better? Tell us — we read everything.</p>
+
+  <form id="stub-fb-form" class="stub-fb__form" novalidate>
+    <input type="hidden" name="_subject" value="Stub app — feedback">
+    <input type="hidden" name="source" value="support page">
+
+    <label class="stub-fb__label" for="stub-fb-type">Type</label>
+    <select id="stub-fb-type" name="type" class="stub-fb__input">
+      <option>Suggestion</option>
+      <option>Bug / something broke</option>
+      <option>Question</option>
+      <option>Other</option>
+    </select>
+
+    <label class="stub-fb__label" for="stub-fb-msg">Your feedback</label>
+    <textarea id="stub-fb-msg" name="message" rows="5" required class="stub-fb__input"
+              placeholder="What's working, what's not, what you'd love to see…"></textarea>
+
+    <label class="stub-fb__label" for="stub-fb-email">Email <span class="stub-fb__opt">(optional — only if you'd like a reply)</span></label>
+    <input id="stub-fb-email" name="email" type="email" class="stub-fb__input" placeholder="you@example.com">
+
+    <button type="submit" class="stub-fb__btn">Send feedback</button>
+    <p id="stub-fb-status" class="stub-fb__status" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+<style>
+  /* Colors are the Stub palette — tweak the three hex values if your page differs. */
+  .stub-fb { max-width: 560px; margin: 56px auto; padding: 0 20px; font-family: inherit; }
+  .stub-fb__title { font-size: 1.5rem; font-weight: 700; color: #E8C572; margin: 0 0 8px; } /* gold  */
+  .stub-fb__sub   { color: #c9c4ba; margin: 0 0 22px; line-height: 1.55; }                  /* muted */
+  .stub-fb__form  { display: flex; flex-direction: column; gap: 6px; }
+  .stub-fb__label { color: #f3efe6; font-size: .85rem; font-weight: 600; margin-top: 14px; } /* cream */
+  .stub-fb__opt   { color: #8f8a80; font-weight: 400; }
+  .stub-fb__input { background: #1b1b1b; border: 1px solid #353535; border-radius: 10px;
+                    padding: 12px; color: #f3efe6; font-size: 1rem; font-family: inherit; width: 100%; box-sizing: border-box; }
+  .stub-fb__input:focus { outline: none; border-color: #E8C572; }
+  textarea.stub-fb__input { resize: vertical; }
+  .stub-fb__btn { margin-top: 18px; align-self: flex-start; background: #E8C572; color: #171717;
+                  border: none; border-radius: 999px; padding: 12px 26px; font-weight: 600;
+                  font-size: 1rem; cursor: pointer; }
+  .stub-fb__btn:disabled { opacity: .5; cursor: default; }
+  .stub-fb__status { margin-top: 12px; font-size: .9rem; min-height: 1.2em; }
+</style>
+
+<script>
+  (function () {
+    var ENDPOINT = 'https://formspree.io/f/xojzzwzy'; /* your Formspree form — already set */
+    var form = document.getElementById('stub-fb-form');
+    var status = document.getElementById('stub-fb-status');
+    var btn = form.querySelector('.stub-fb__btn');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.message.value.trim()) { status.style.color = '#E07A5F'; status.textContent = 'Please add a short message first.'; return; }
+      btn.disabled = true; status.style.color = '#c9c4ba'; status.textContent = 'Sending…';
+      fetch(ENDPOINT, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
+        .then(function (r) {
+          if (r.ok) { form.reset(); status.style.color = '#7CC36E'; status.textContent = 'Thank you — your feedback was sent.'; }
+          else { status.style.color = '#E07A5F'; status.textContent = 'Something went wrong. Please try again.'; }
+        })
+        .catch(function () { status.style.color = '#E07A5F'; status.textContent = 'Network error — please try again.'; })
+        .finally(function () { btn.disabled = false; });
+    });
+  })();
+</script>
+<!-- ===================== END STUB FEEDBACK SECTION ===================== -->
+
 </body>
 </html>

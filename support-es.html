@@ -121,5 +121,81 @@
 
   <p class="disclaimer">stub. — escáner de recibos con IA y registro de deducciones para trabajadores independientes. <a href="/es/">Inicio</a> · <a href="/es/#privacy">Política de privacidad</a> · <a href="/support.html">English</a></p>
 </div>
+
+<!-- ============================================================================
+     STUB — SECCIÓN DE COMENTARIOS  —  pega todo este bloque dentro del <body>
+     de support-es.html (un buen lugar es justo antes de </body> o del pie).
+     Lo único que debes cambiar: reemplaza  YOUR_FORM_ID  en el <script> por el
+     endpoint de tu backend de formularios (el mismo que en la versión en inglés).
+============================================================================ -->
+<section id="feedback" class="stub-fb">
+  <h2 class="stub-fb__title">Envíanos tus comentarios</h2>
+  <p class="stub-fb__sub">¿Encontraste un error o tienes una idea para mejorar Stub? Cuéntanos — leemos todo.</p>
+
+  <form id="stub-fb-form" class="stub-fb__form" novalidate>
+    <input type="hidden" name="_subject" value="Stub app — comentarios">
+    <input type="hidden" name="source" value="support page (es)">
+
+    <label class="stub-fb__label" for="stub-fb-type">Tipo</label>
+    <select id="stub-fb-type" name="type" class="stub-fb__input">
+      <option>Sugerencia</option>
+      <option>Error / algo falló</option>
+      <option>Pregunta</option>
+      <option>Otro</option>
+    </select>
+
+    <label class="stub-fb__label" for="stub-fb-msg">Tus comentarios</label>
+    <textarea id="stub-fb-msg" name="message" rows="5" required class="stub-fb__input"
+              placeholder="Qué funciona, qué no, qué te encantaría ver…"></textarea>
+
+    <label class="stub-fb__label" for="stub-fb-email">Correo <span class="stub-fb__opt">(opcional — solo si quieres respuesta)</span></label>
+    <input id="stub-fb-email" name="email" type="email" class="stub-fb__input" placeholder="tu@ejemplo.com">
+
+    <button type="submit" class="stub-fb__btn">Enviar comentarios</button>
+    <p id="stub-fb-status" class="stub-fb__status" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+<style>
+  /* Colores de la paleta Stub — ajusta los tres valores hex si tu página difiere. */
+  .stub-fb { max-width: 560px; margin: 56px auto; padding: 0 20px; font-family: inherit; }
+  .stub-fb__title { font-size: 1.5rem; font-weight: 700; color: #E8C572; margin: 0 0 8px; }
+  .stub-fb__sub   { color: #c9c4ba; margin: 0 0 22px; line-height: 1.55; }
+  .stub-fb__form  { display: flex; flex-direction: column; gap: 6px; }
+  .stub-fb__label { color: #f3efe6; font-size: .85rem; font-weight: 600; margin-top: 14px; }
+  .stub-fb__opt   { color: #8f8a80; font-weight: 400; }
+  .stub-fb__input { background: #1b1b1b; border: 1px solid #353535; border-radius: 10px;
+                    padding: 12px; color: #f3efe6; font-size: 1rem; font-family: inherit; width: 100%; box-sizing: border-box; }
+  .stub-fb__input:focus { outline: none; border-color: #E8C572; }
+  textarea.stub-fb__input { resize: vertical; }
+  .stub-fb__btn { margin-top: 18px; align-self: flex-start; background: #E8C572; color: #171717;
+                  border: none; border-radius: 999px; padding: 12px 26px; font-weight: 600;
+                  font-size: 1rem; cursor: pointer; }
+  .stub-fb__btn:disabled { opacity: .5; cursor: default; }
+  .stub-fb__status { margin-top: 12px; font-size: .9rem; min-height: 1.2em; }
+</style>
+
+<script>
+  (function () {
+    var ENDPOINT = 'https://formspree.io/f/xojzzwzy'; /* tu formulario de Formspree — ya configurado */
+    var form = document.getElementById('stub-fb-form');
+    var status = document.getElementById('stub-fb-status');
+    var btn = form.querySelector('.stub-fb__btn');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.message.value.trim()) { status.style.color = '#E07A5F'; status.textContent = 'Escribe un mensaje breve primero.'; return; }
+      btn.disabled = true; status.style.color = '#c9c4ba'; status.textContent = 'Enviando…';
+      fetch(ENDPOINT, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
+        .then(function (r) {
+          if (r.ok) { form.reset(); status.style.color = '#7CC36E'; status.textContent = 'Gracias — tus comentarios fueron enviados.'; }
+          else { status.style.color = '#E07A5F'; status.textContent = 'Algo salió mal. Inténtalo de nuevo.'; }
+        })
+        .catch(function () { status.style.color = '#E07A5F'; status.textContent = 'Error de red — inténtalo de nuevo.'; })
+        .finally(function () { btn.disabled = false; });
+    });
+  })();
+</script>
+<!-- ===================== FIN DE LA SECCIÓN DE COMENTARIOS ===================== -->
+
 </body>
 </html>
