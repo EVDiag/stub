@@ -1,0 +1,5 @@
+# Cloudflare Pages header rules.
+# Serve Apple's App Site Association file as JSON. Apple's CDN tolerates
+# octet-stream, but application/json is the correct, unambiguous type.
+/.well-known/apple-app-site-association
+  Content-Type: application/json
