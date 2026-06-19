@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.stubx.app",
+      "sha256_cert_fingerprints": [
+        "45:3E:55:BB:51:89:9B:11:37:B6:65:44:91:9F:5B:42:1B:D4:91:D8:E5:11:1F:A6:58:0B:D6:BF:04:16:19:9D",
+        "C7:25:C7:D3:53:82:52:16:64:D1:76:E4:40:3E:71:AD:2A:1B:E0:00:07:36:BA:9B:19:BB:AB:AB:BA:C0:95:19"
+      ]
+    }
+  }
+]
