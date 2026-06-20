@@ -1,16 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://stub.evdiag.net/</loc><priority>1.0</priority></url>
-  <url><loc>https://stub.evdiag.net/guides.html</loc><priority>0.9</priority></url>
-  <url><loc>https://stub.evdiag.net/gig-driver-tax-deductions.html</loc><priority>0.8</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://stub.evdiag.net/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/guides.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/guias.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/guides.html"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/es/guias.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/guias.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/guides.html"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/gig-driver-tax-deductions.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/gig-driver-tax-deductions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-repartidores.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/gig-driver-tax-deductions.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/es/deducciones-repartidores.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/gig-driver-tax-deductions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-repartidores.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/gig-driver-tax-deductions.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/freelancer-tax-deductions-checklist.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/freelancer-tax-deductions-checklist.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-trabajador-independiente.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/freelancer-tax-deductions-checklist.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/es/deducciones-trabajador-independiente.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/freelancer-tax-deductions-checklist.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-trabajador-independiente.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/freelancer-tax-deductions-checklist.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/handyman-contractor-tax-deductions.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/handyman-contractor-tax-deductions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-construccion.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/handyman-contractor-tax-deductions.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/es/deducciones-construccion.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/handyman-contractor-tax-deductions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-construccion.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/handyman-contractor-tax-deductions.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/rideshare-driver-tax-deductions.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/rideshare-driver-tax-deductions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-conductores.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/rideshare-driver-tax-deductions.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/es/deducciones-conductores.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/rideshare-driver-tax-deductions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-conductores.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/rideshare-driver-tax-deductions.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/hairstylist-barber-tax-deductions.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/hairstylist-barber-tax-deductions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-estilistas-barberos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/hairstylist-barber-tax-deductions.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/es/deducciones-estilistas-barberos.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/hairstylist-barber-tax-deductions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-estilistas-barberos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/hairstylist-barber-tax-deductions.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/house-cleaning-tax-deductions.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/house-cleaning-tax-deductions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-servicios-limpieza.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/house-cleaning-tax-deductions.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/es/deducciones-servicios-limpieza.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/house-cleaning-tax-deductions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-servicios-limpieza.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/house-cleaning-tax-deductions.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/support.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/support-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/support.html"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/support-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/support-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/support.html"/>
+    <priority>0.6</priority>
+  </url>
   <url><loc>https://stub.evdiag.net/etsy-seller-tax-deductions.html</loc><priority>0.8</priority></url>
-  <url><loc>https://stub.evdiag.net/freelancer-tax-deductions-checklist.html</loc><priority>0.8</priority></url>
-  <url><loc>https://stub.evdiag.net/rideshare-driver-tax-deductions.html</loc><priority>0.8</priority></url>
   <url><loc>https://stub.evdiag.net/real-estate-agent-tax-deductions.html</loc><priority>0.8</priority></url>
   <url><loc>https://stub.evdiag.net/content-creator-tax-deductions.html</loc><priority>0.8</priority></url>
   <url><loc>https://stub.evdiag.net/photographer-tax-deductions.html</loc><priority>0.8</priority></url>
-  <url><loc>https://stub.evdiag.net/hairstylist-barber-tax-deductions.html</loc><priority>0.8</priority></url>
   <url><loc>https://stub.evdiag.net/trucker-tax-deductions.html</loc><priority>0.8</priority></url>
-  <url><loc>https://stub.evdiag.net/handyman-contractor-tax-deductions.html</loc><priority>0.8</priority></url>
-  <url><loc>https://stub.evdiag.net/support.html</loc><priority>0.6</priority></url>
 </urlset>
