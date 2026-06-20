@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Support &amp; FAQ — stub.</title>
+<meta name="description" content="Answers about Stub: scans, subscriptions, restoring purchases, editing receipts, exports, and your data. Contact support if you're still stuck." />
+<link rel="canonical" href="https://stub.evdiag.net/support.html" />
+<meta property="og:title" content="Stub — Support &amp; FAQ" />
+<meta property="og:description" content="Scans, billing, exports, and your data — answered." />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/png" href="icon-192.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root { --bg:#0E0D0B; --surface:#1A1815; --border:#2A2722; --cream:#F4EDE2; --muted:#9A917F; --gold:#D4A574; --sage:#7FC59B; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--cream); font-family:'Instrument Sans',sans-serif; line-height:1.65; }
+  .wrap { max-width:680px; margin:0 auto; padding:0 24px; }
+  nav { padding:24px 0; } nav a { color:var(--muted); text-decoration:none; font-size:14px; } nav a:hover { color:var(--gold); }
+  .brand { font-family:'Instrument Serif',serif; color:var(--cream); } .brand .dot { color:var(--gold); }
+  h1 { font-family:'Instrument Serif',serif; font-weight:400; font-size:clamp(32px,5vw,44px); line-height:1.15; margin:24px 0 8px; }
+  h1 em { color:var(--gold); }
+  .sub { color:var(--muted); font-size:15px; margin-bottom:32px; }
+  h2 { font-family:'Instrument Serif',serif; font-weight:400; font-size:22px; margin:36px 0 12px; color:var(--gold); }
+  details { background:var(--surface); border:1px solid var(--border); border-radius:14px; margin-bottom:10px; overflow:hidden; }
+  summary { cursor:pointer; padding:16px 18px; font-weight:600; font-size:14.5px; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+  summary::-webkit-details-marker { display:none; }
+  summary::after { content:'+'; color:var(--gold); font-size:18px; flex-shrink:0; }
+  details[open] summary::after { content:'–'; }
+  details p, details ul { color:#CFC6B8; font-size:14px; padding:0 18px 16px; }
+  details ul { margin-left:18px; }
+  details li { margin-bottom:6px; }
+  details a { color:var(--gold); }
+  .contact { background:linear-gradient(180deg,var(--surface),var(--bg)); border:1px solid var(--border); border-radius:20px; padding:28px; margin:44px 0 24px; text-align:center; }
+  .contact h3 { font-family:'Instrument Serif',serif; font-weight:400; font-size:24px; margin-bottom:6px; }
+  .contact p { color:var(--muted); font-size:14px; margin-bottom:14px; }
+  .btn { display:inline-block; background:var(--gold); color:var(--bg); padding:12px 24px; border-radius:999px; font-weight:600; font-size:14px; text-decoration:none; }
+  .disclaimer { color:var(--muted); font-size:12px; border-top:1px solid var(--border); padding:24px 0 48px; margin-top:40px; }
+  .disclaimer a { color:var(--gold); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><a href="index.html">← <span class="brand">stub<span class="dot">.</span></span></a></nav>
+
+  <h1>Support &amp; <em>FAQ</em></h1>
+  <p class="sub">Most questions are answered below — billing, scans, exports, and your data. Still stuck? Email is at the bottom.</p>
+
+  <h2>Scanning</h2>
+  <details>
+    <summary>How does receipt scanning work?</summary>
+    <p>Snap a photo (or pick one from your library). Stub's AI reads the receipt — even crumpled, faded, or blurry — extracts the vendor, amount, and line items, decides whether it's deductible, and assigns the matching Schedule C line with a confidence score and a short explanation of its reasoning.</p>
+  </details>
+  <details>
+    <summary>The AI got something wrong — can I fix it?</summary>
+    <p>Yes. Open the receipt and tap the pencil icon (or "Review &amp; correct details" on lower-confidence receipts). You can edit the vendor, amount, date, category, deductible status, and tax line. Saving marks the receipt as reviewed by you.</p>
+  </details>
+  <details>
+    <summary>What happens if I scan the same receipt twice?</summary>
+    <p>Stub checks every new scan against your saved receipts. If the vendor, amount, and date all match an existing one, it pauses and asks before saving — so duplicates don't quietly inflate your deduction totals. If it's genuinely a separate purchase, one tap saves both.</p>
+  </details>
+  <details>
+    <summary>A scan failed or said it couldn't read the receipt</summary>
+    <p>Usually a connection hiccup — your photo stays on the screen, so just tap "Try again." If it keeps failing, check that the receipt is reasonably flat, lit, and fills most of the frame.</p>
+  </details>
+  <details>
+    <summary>How many free scans do I get?</summary>
+    <p>15 per month, resetting on the 1st. Everything else — tracking, editing, the Schedule C summary — stays available regardless.</p>
+  </details>
+
+  <h2>Subscription &amp; billing</h2>
+  <details>
+    <summary>What does Pro include, and what does it cost?</summary>
+    <p>Pro removes the scan limit and unlocks the accountant-ready CSV export: $11.99/month or $79/year, with a 7-day free trial. Billing is handled entirely by Apple or Google — Stub never sees your payment details.</p>
+  </details>
+  <details>
+    <summary>How do I cancel or manage my subscription?</summary>
+    <p>Subscriptions are managed by your app store, not inside Stub:</p>
+    <ul>
+      <li>iPhone: <a href="https://apps.apple.com/account/subscriptions">apps.apple.com/account/subscriptions</a></li>
+      <li>Android: <a href="https://play.google.com/store/account/subscriptions">play.google.com/store/account/subscriptions</a></li>
+    </ul>
+    <p>Canceling stops the next renewal; you keep Pro until the current period ends. Deleting the app does <strong>not</strong> cancel a subscription.</p>
+  </details>
+  <details>
+    <summary>How do refunds work?</summary>
+    <p>Refunds are decided by the store you purchased through: Apple users can request one at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>; Google users via Play order history. We can't process refunds directly because we never receive your payment.</p>
+  </details>
+  <details>
+    <summary>I'm Pro but the app shows the free plan (new phone / reinstall)</summary>
+    <p>Open Settings inside the app and tap "Restore purchases" while signed into the same Apple ID or Google account you bought with. Your Pro status comes straight back.</p>
+  </details>
+
+  <h2>Your data &amp; privacy</h2>
+  <details>
+    <summary>Where are my receipts stored?</summary>
+    <p>On your device. Stub has no accounts and no cloud database — your receipt history lives locally. When you scan, the photo is sent securely for AI processing and isn't retained as part of any profile about you. The full policy is in our <a href="index.html#privacy">privacy policy</a>.</p>
+  </details>
+  <details>
+    <summary>How do I delete my data?</summary>
+    <p>Delete individual receipts from their detail screen. Because everything is stored on-device, uninstalling the app removes all of it — there's no server copy to chase.</p>
+  </details>
+  <details>
+    <summary>Is Stub tax advice?</summary>
+    <p>No. Stub is a record-keeping tool with educational guidance. The AI's category and Schedule C suggestions are starting points, not professional advice — confirm anything significant with a tax professional or at irs.gov.</p>
+  </details>
+
+  <h2>Exports</h2>
+  <details>
+    <summary>How do I get my data to my accountant?</summary>
+    <p>Reports tab → "Export CSV for your accountant" (Pro) shares a clean spreadsheet of every receipt with dates, amounts, categories, and Schedule C lines. The free "Schedule C summary" gives grouped totals per line — handy for plugging into tax software yourself.</p>
+  </details>
+
+  <div class="contact">
+    <h3>Still stuck?</h3>
+    <p>Email us and a human (the developer, actually) will get back to you, usually within 1–2 business days.</p>
+    <a class="btn" href="mailto:service@evdiag.net?subject=Stub%20support">service@evdiag.net</a>
+  </div>
+
+  <p class="disclaimer">stub. — AI receipt scanner &amp; deduction tracker for the self-employed. <a href="index.html">Home</a> · <a href="guides.html">Tax guides</a> · <a href="index.html#privacy">Privacy policy</a></p>
+</div>
+</body>
+</html>
