@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Back up your data & move to a new phone — stub.</title>
+<meta name="description" content="How to back up your Stub receipts and mileage to a file you keep yourself, restore them, and move everything to a new phone. No account, no server — your data stays yours." />
+<link rel="canonical" href="https://stub.evdiag.net/backup-guide.html" />
+<link rel="alternate" hreflang="en" href="https://stub.evdiag.net/backup-guide.html" />
+<link rel="alternate" hreflang="es" href="https://stub.evdiag.net/backup-guide-es.html" />
+<link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/backup-guide.html" />
+<meta property="og:title" content="Back up your data & move to a new phone — stub." />
+<meta property="og:description" content="Back up your receipts and mileage to a file you keep, and move everything to a new phone." />
+<meta property="og:image" content="https://stub.evdiag.net/og-image.png" />
+<meta property="og:type" content="article" />
+<link rel="icon" type="image/png" href="icon-192.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root { --bg:#0E0D0B; --surface:#1A1815; --border:#2A2722; --cream:#F4EDE2; --muted:#9A917F; --gold:#D4A574; --sage:#7FC59B; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--cream); font-family:'Instrument Sans',sans-serif; line-height:1.7; }
+  .wrap { max-width:680px; margin:0 auto; padding:0 24px; }
+  nav { padding:24px 0; } nav a { color:var(--muted); text-decoration:none; font-size:14px; } nav a:hover { color:var(--gold); }
+  .brand { font-family:'Instrument Serif',serif; color:var(--cream); } .brand .dot { color:var(--gold); }
+  h1 { font-family:'Instrument Serif',serif; font-weight:400; font-size:clamp(32px,5vw,44px); line-height:1.15; margin:24px 0 12px; }
+  h1 em { color:var(--gold); }
+  h2 { font-family:'Instrument Serif',serif; font-weight:400; font-size:26px; margin:44px 0 12px; color:var(--cream); }
+  h2 .line { color:var(--muted); font-size:14px; font-family:'Instrument Sans',sans-serif; letter-spacing:.08em; text-transform:uppercase; display:block; margin-bottom:4px; }
+  h3 { font-family:'Instrument Sans',sans-serif; font-weight:600; font-size:17px; margin:0 0 14px; color:var(--cream); }
+  p { color:#CFC6B8; margin:0 0 16px; font-size:16px; }
+  ul { margin:0 0 16px 20px; color:#CFC6B8; } li { margin-bottom:8px; }
+  ol { margin:0 0 4px 20px; color:#CFC6B8; } ol li { margin-bottom:10px; }
+  .meta { color:var(--muted); font-size:13px; margin-bottom:8px; }
+  .callout { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:20px 22px; margin:24px 0; }
+  .callout strong { color:var(--gold); }
+  .card { background:var(--surface); border:1px solid var(--border); border-radius:18px; padding:24px 22px; margin:18px 0; }
+  .tag { display:inline-block; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); border:1px solid rgba(212,165,116,.35); border-radius:999px; padding:3px 10px; margin-bottom:14px; }
+  .fname { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13px; color:var(--cream); background:#100F0D; border:1px solid var(--border); border-radius:8px; padding:2px 8px; white-space:nowrap; }
+  /* step-flow illustration */
+  .flow { display:flex; align-items:flex-start; justify-content:center; gap:10px; margin:6px 0 22px; flex-wrap:wrap; }
+  .flow .step { display:flex; flex-direction:column; align-items:center; gap:9px; width:92px; }
+  .flow .badge { width:56px; height:56px; border-radius:16px; background:#100F0D; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; }
+  .flow .badge svg { width:25px; height:25px; color:var(--cream); }
+  .flow .badge.gold { border-color:rgba(212,165,116,.5); }
+  .flow .badge.gold svg { color:var(--gold); }
+  .flow .cap { font-size:11.5px; color:var(--muted); text-align:center; line-height:1.3; }
+  .flow .arrow { margin-top:18px; color:#3a352e; flex:0 0 auto; }
+  .flow .arrow svg { width:18px; height:18px; }
+  .cta { background:linear-gradient(180deg,var(--surface),var(--bg)); border:1px solid var(--border); border-radius:20px; padding:32px 28px; margin:48px 0 24px; text-align:center; }
+  .cta h3 { font-family:'Instrument Serif',serif; font-weight:400; font-size:26px; margin-bottom:8px; color:var(--cream); }
+  .cta p { color:var(--muted); font-size:14px; }
+  .btn { display:inline-block; background:var(--gold); color:var(--bg); padding:13px 26px; border-radius:999px; font-weight:600; font-size:14px; text-decoration:none; margin:8px 6px 0; }
+  .btn.ghost { background:transparent; color:var(--cream); border:1px solid var(--border); }
+  .disclaimer { color:var(--muted); font-size:12px; border-top:1px solid var(--border); padding:24px 0 48px; margin-top:48px; }
+  .more { color:var(--muted); font-size:14px; margin-top:32px; } .more a { color:var(--gold); text-decoration:none; }
+  strong { color:var(--cream); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><a href="index.html">&larr; <span class="brand">stub<span class="dot">.</span></span></a></nav>
+
+  <p class="meta">Help &middot; Backup &amp; restore</p>
+  <h1>Back up your data and <em>move to a new phone</em></h1>
+  <p>Stub keeps everything <strong>on your phone</strong> — there's no account and no server holding your receipts. That's good for your privacy, but it means one thing is up to you: keeping a backup. A backup is simply a <strong>file you save somewhere safe</strong>. With it, you can move everything to a new phone or recover after a reset. Here's how.</p>
+
+  <div class="callout">
+    <strong>Why a backup matters:</strong> because your data lives only on your device, losing or replacing the phone without a backup means losing your records. A backup file — saved to your email, Google Drive, or Files — is your safety net. Stub reminds you weekly so it never slips.
+  </div>
+
+  <h2><span class="line">Step one</span>The two kinds of backup</h2>
+  <p>In <strong>Settings &rarr; Backup &amp; restore</strong>, you can make either:</p>
+  <div class="card">
+    <h3>Back up everything</h3>
+    <p style="margin-bottom:10px">Your receipts, your mileage, <strong>and every receipt photo</strong>. This is the one to use when moving to a new phone, so your pictures come along. It's larger because it carries the images.</p>
+    <p style="margin:0">Saved as <span class="fname">Stub-Full-backup-2026-06-26.json</span></p>
+  </div>
+  <div class="card">
+    <h3>Back up data only</h3>
+    <p style="margin-bottom:10px">Your receipts and mileage <strong>without the photos</strong>. A much smaller file — handy for a quick records-only copy when you don't need the images.</p>
+    <p style="margin:0">Saved as <span class="fname">Stub-data-only-backup-2026-06-26.json</span></p>
+  </div>
+  <p>The names tell them apart at a glance, so you'll always know which file is which.</p>
+
+  <h2><span class="line">The main one</span>Moving to a new phone</h2>
+  <p>Two short halves: save a full backup on the old phone, then load it on the new one. You can start both right inside the app — open <strong>Settings &rarr; Moving to a new phone?</strong> and pick which phone you're on.</p>
+
+  <div class="card">
+    <span class="tag">On your old phone</span>
+    <div class="flow">
+      <div class="step">
+        <div class="badge gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><line x1="10" y1="18" x2="14" y2="18"/></svg></div>
+        <span class="cap">This phone</span>
+      </div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      <div class="step">
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><polyline points="14 3 14 8 19 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="16" x2="13" y2="16"/></svg></div>
+        <span class="cap">Backup file</span>
+      </div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      <div class="step">
+        <div class="badge gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15a4 4 0 0 0 4 4h9a4 4 0 0 0 1-7.9A6 6 0 0 0 6 9a4 4 0 0 0-2 6z"/><polyline points="9 14 12 11 15 14" transform="translate(0 1)"/></svg></div>
+        <span class="cap">Email / Drive / Files</span>
+      </div>
+    </div>
+    <!-- You can drop real screenshots in above this list if you like (Share sheet, "save to Files"). -->
+    <ol>
+      <li>Tap <strong>Back up everything</strong>. (Use the full backup, not data-only, so your photos transfer.)</li>
+      <li>Your phone's share sheet opens. Send the file somewhere you'll reach from the new phone — <strong>email it to yourself</strong>, or save to <strong>Google Drive</strong> or <strong>Files</strong>.</li>
+      <li>That's the old phone done. The file is now safely off the device.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <span class="tag">On your new phone</span>
+    <div class="flow">
+      <div class="step">
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><polyline points="14 3 14 8 19 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="16" x2="13" y2="16"/></svg></div>
+        <span class="cap">Your backup file</span>
+      </div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      <div class="step">
+        <div class="badge gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><line x1="10" y1="18" x2="14" y2="18"/></svg></div>
+        <span class="cap">Load into Stub</span>
+      </div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      <div class="step">
+        <div class="badge gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span class="cap">All restored</span>
+      </div>
+    </div>
+    <ol>
+      <li>Install Stub and open it once.</li>
+      <li>Go to <strong>Settings &rarr; Moving to a new phone? &rarr; This is my NEW phone</strong>, then tap <strong>Load backup</strong>.</li>
+      <li>Pick the backup file you saved. Stub shows you its date and what's inside, then asks you to confirm.</li>
+      <li>Confirm — your receipts, mileage and photos are all back.</li>
+    </ol>
+  </div>
+
+  <div class="callout">
+    <strong>Do it before adding anything new.</strong> Loading a backup <strong>replaces</strong> whatever is in Stub on the new phone. On a fresh install there's nothing to lose — but if you've already added receipts there, restoring will overwrite them. So load first, then carry on.
+  </div>
+
+  <h2><span class="line">Also useful</span>Restoring on the same phone</h2>
+  <p>If you reset your phone or reinstalled the app, the steps are the same as the new-phone half: <strong>Settings &rarr; Restore from backup</strong>, pick your file, confirm. Because restore replaces everything currently in Stub, you'll see the backup's date on the confirmation screen so you always know exactly what you're loading.</p>
+
+  <h2><span class="line">Good habits</span>Keeping your backup safe</h2>
+  <ul>
+    <li><strong>Keep it somewhere you'll find it.</strong> Email-to-self and Google Drive are reliable because they're tied to your account, not your phone.</li>
+    <li><strong>Back up regularly.</strong> Stub nudges you weekly; a recent backup means less lost if anything happens.</li>
+    <li><strong>The file is plain and portable.</strong> It isn't password-locked, so store it where only you can reach it — your own email or cloud drive, behind your login.</li>
+  </ul>
+
+  <div class="cta">
+    <h3>Your records, in your hands</h3>
+    <p>No account, no server. Back up in a tap, restore in a tap, and never lose a year of deductions.</p>
+    <a class="btn" href="index.html">Back to stub.</a>
+    <a class="btn ghost" href="support.html">Help &amp; FAQ</a>
+  </div>
+
+  <p class="more">More: <a href="support.html">Help &amp; FAQ</a> &middot; <a href="gig-driver-tax-deductions.html">Gig driver tax deductions</a></p>
+
+  <div class="disclaimer">
+    stub. helps you organize receipts and mileage for your own records. It is not tax, legal, or accounting advice. Your data is stored on your device; backups are files you create and control.
+  </div>
+</div>
+</body>
+</html>

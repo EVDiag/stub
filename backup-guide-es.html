@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Respalda tus datos y cámbiate de teléfono — stub.</title>
+<meta name="description" content="Cómo respaldar tus recibos y millas de Stub en un archivo que tú guardas, restaurarlos y pasar todo a un teléfono nuevo. Sin cuenta y sin servidor — tus datos siguen siendo tuyos." />
+<link rel="canonical" href="https://stub.evdiag.net/backup-guide-es.html" />
+<link rel="alternate" hreflang="es" href="https://stub.evdiag.net/backup-guide-es.html" />
+<link rel="alternate" hreflang="en" href="https://stub.evdiag.net/backup-guide.html" />
+<link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/backup-guide.html" />
+<meta property="og:title" content="Respalda tus datos y cámbiate de teléfono — stub." />
+<meta property="og:description" content="Respalda tus recibos y millas en un archivo que tú guardas, y pasa todo a un teléfono nuevo." />
+<meta property="og:image" content="https://stub.evdiag.net/og-image.png" />
+<meta property="og:type" content="article" />
+<link rel="icon" type="image/png" href="icon-192.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root { --bg:#0E0D0B; --surface:#1A1815; --border:#2A2722; --cream:#F4EDE2; --muted:#9A917F; --gold:#D4A574; --sage:#7FC59B; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--cream); font-family:'Instrument Sans',sans-serif; line-height:1.7; }
+  .wrap { max-width:680px; margin:0 auto; padding:0 24px; }
+  nav { padding:24px 0; } nav a { color:var(--muted); text-decoration:none; font-size:14px; } nav a:hover { color:var(--gold); }
+  .brand { font-family:'Instrument Serif',serif; color:var(--cream); } .brand .dot { color:var(--gold); }
+  h1 { font-family:'Instrument Serif',serif; font-weight:400; font-size:clamp(32px,5vw,44px); line-height:1.15; margin:24px 0 12px; }
+  h1 em { color:var(--gold); }
+  h2 { font-family:'Instrument Serif',serif; font-weight:400; font-size:26px; margin:44px 0 12px; color:var(--cream); }
+  h2 .line { color:var(--muted); font-size:14px; font-family:'Instrument Sans',sans-serif; letter-spacing:.08em; text-transform:uppercase; display:block; margin-bottom:4px; }
+  h3 { font-family:'Instrument Sans',sans-serif; font-weight:600; font-size:17px; margin:0 0 14px; color:var(--cream); }
+  p { color:#CFC6B8; margin:0 0 16px; font-size:16px; }
+  ul { margin:0 0 16px 20px; color:#CFC6B8; } li { margin-bottom:8px; }
+  ol { margin:0 0 4px 20px; color:#CFC6B8; } ol li { margin-bottom:10px; }
+  .meta { color:var(--muted); font-size:13px; margin-bottom:8px; }
+  .callout { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:20px 22px; margin:24px 0; }
+  .callout strong { color:var(--gold); }
+  .card { background:var(--surface); border:1px solid var(--border); border-radius:18px; padding:24px 22px; margin:18px 0; }
+  .tag { display:inline-block; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); border:1px solid rgba(212,165,116,.35); border-radius:999px; padding:3px 10px; margin-bottom:14px; }
+  .fname { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13px; color:var(--cream); background:#100F0D; border:1px solid var(--border); border-radius:8px; padding:2px 8px; white-space:nowrap; }
+  .flow { display:flex; align-items:flex-start; justify-content:center; gap:10px; margin:6px 0 22px; flex-wrap:wrap; }
+  .flow .step { display:flex; flex-direction:column; align-items:center; gap:9px; width:96px; }
+  .flow .badge { width:56px; height:56px; border-radius:16px; background:#100F0D; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; }
+  .flow .badge svg { width:25px; height:25px; color:var(--cream); }
+  .flow .badge.gold { border-color:rgba(212,165,116,.5); }
+  .flow .badge.gold svg { color:var(--gold); }
+  .flow .cap { font-size:11.5px; color:var(--muted); text-align:center; line-height:1.3; }
+  .flow .arrow { margin-top:18px; color:#3a352e; flex:0 0 auto; }
+  .flow .arrow svg { width:18px; height:18px; }
+  .cta { background:linear-gradient(180deg,var(--surface),var(--bg)); border:1px solid var(--border); border-radius:20px; padding:32px 28px; margin:48px 0 24px; text-align:center; }
+  .cta h3 { font-family:'Instrument Serif',serif; font-weight:400; font-size:26px; margin-bottom:8px; color:var(--cream); }
+  .cta p { color:var(--muted); font-size:14px; }
+  .btn { display:inline-block; background:var(--gold); color:var(--bg); padding:13px 26px; border-radius:999px; font-weight:600; font-size:14px; text-decoration:none; margin:8px 6px 0; }
+  .btn.ghost { background:transparent; color:var(--cream); border:1px solid var(--border); }
+  .disclaimer { color:var(--muted); font-size:12px; border-top:1px solid var(--border); padding:24px 0 48px; margin-top:48px; }
+  .more { color:var(--muted); font-size:14px; margin-top:32px; } .more a { color:var(--gold); text-decoration:none; }
+  strong { color:var(--cream); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><a href="index.html">&larr; <span class="brand">stub<span class="dot">.</span></span></a></nav>
+
+  <p class="meta">Ayuda &middot; Copia y restauración</p>
+  <h1>Respalda tus datos y <em>cámbiate de teléfono</em></h1>
+  <p>Stub guarda todo <strong>en tu teléfono</strong> — no hay cuenta ni servidor con tus recibos. Eso es bueno para tu privacidad, pero significa que una cosa depende de ti: tener una copia. Una copia es simplemente un <strong>archivo que guardas en un lugar seguro</strong>. Con ella puedes pasar todo a un teléfono nuevo o recuperarte después de un reinicio. Así se hace.</p>
+
+  <div class="callout">
+    <strong>Por qué importa una copia:</strong> como tus datos viven solo en tu dispositivo, perder o cambiar el teléfono sin una copia significa perder tus registros. Un archivo de copia — guardado en tu correo, Google Drive o Archivos — es tu red de seguridad. Stub te recuerda cada semana para que no se te pase.
+  </div>
+
+  <h2><span class="line">Paso uno</span>Los dos tipos de copia</h2>
+  <p>En <strong>Ajustes &rarr; Copia y restauración</strong> puedes hacer cualquiera de las dos:</p>
+  <div class="card">
+    <h3>Respaldar todo</h3>
+    <p style="margin-bottom:10px">Tus recibos, tus millas <strong>y todas las fotos de recibos</strong>. Esta es la que debes usar al cambiar de teléfono, para que tus fotos vengan también. Es más grande porque carga las imágenes.</p>
+    <p style="margin:0">Se guarda como <span class="fname">Stub-Full-backup-2026-06-26.json</span></p>
+  </div>
+  <div class="card">
+    <h3>Respaldar solo datos</h3>
+    <p style="margin-bottom:10px">Tus recibos y millas <strong>sin las fotos</strong>. Un archivo mucho más pequeño — útil para una copia rápida solo de registros cuando no necesitas las imágenes.</p>
+    <p style="margin:0">Se guarda como <span class="fname">Stub-data-only-backup-2026-06-26.json</span></p>
+  </div>
+  <p>Los nombres las distinguen de un vistazo, así siempre sabrás cuál archivo es cuál.</p>
+
+  <h2><span class="line">La principal</span>Cambiar de teléfono</h2>
+  <p>Son dos mitades cortas: guarda una copia completa en el teléfono anterior y luego cárgala en el nuevo. Puedes empezar ambas dentro de la app — abre <strong>Ajustes &rarr; ¿Cambias de teléfono?</strong> y elige en cuál teléfono estás.</p>
+
+  <div class="card">
+    <span class="tag">En tu teléfono anterior</span>
+    <div class="flow">
+      <div class="step">
+        <div class="badge gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><line x1="10" y1="18" x2="14" y2="18"/></svg></div>
+        <span class="cap">Este teléfono</span>
+      </div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      <div class="step">
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><polyline points="14 3 14 8 19 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="16" x2="13" y2="16"/></svg></div>
+        <span class="cap">Archivo de copia</span>
+      </div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      <div class="step">
+        <div class="badge gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15a4 4 0 0 0 4 4h9a4 4 0 0 0 1-7.9A6 6 0 0 0 6 9a4 4 0 0 0-2 6z"/><polyline points="9 14 12 11 15 14" transform="translate(0 1)"/></svg></div>
+        <span class="cap">Correo / Drive / Archivos</span>
+      </div>
+    </div>
+    <ol>
+      <li>Toca <strong>Respaldar todo</strong>. (Usa la copia completa, no solo datos, para que tus fotos se transfieran.)</li>
+      <li>Se abre el menú para compartir de tu teléfono. Envía el archivo a un lugar que puedas abrir desde el teléfono nuevo — <strong>envíatelo por correo</strong>, o guárdalo en <strong>Google Drive</strong> o <strong>Archivos</strong>.</li>
+      <li>Listo con el teléfono anterior. El archivo ya está a salvo fuera del dispositivo.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <span class="tag">En tu teléfono nuevo</span>
+    <div class="flow">
+      <div class="step">
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><polyline points="14 3 14 8 19 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="16" x2="13" y2="16"/></svg></div>
+        <span class="cap">Tu archivo de copia</span>
+      </div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      <div class="step">
+        <div class="badge gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><line x1="10" y1="18" x2="14" y2="18"/></svg></div>
+        <span class="cap">Cargar en Stub</span>
+      </div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      <div class="step">
+        <div class="badge gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span class="cap">Todo restaurado</span>
+      </div>
+    </div>
+    <ol>
+      <li>Instala Stub y ábrelo una vez.</li>
+      <li>Ve a <strong>Ajustes &rarr; ¿Cambias de teléfono? &rarr; Este es mi teléfono NUEVO</strong> y toca <strong>Cargar copia</strong>.</li>
+      <li>Elige el archivo de copia que guardaste. Stub te muestra su fecha y lo que contiene, y luego te pide confirmar.</li>
+      <li>Confirma — tus recibos, millas y fotos están de vuelta.</li>
+    </ol>
+  </div>
+
+  <div class="callout">
+    <strong>Hazlo antes de agregar algo nuevo.</strong> Cargar una copia <strong>reemplaza</strong> lo que haya en Stub en el teléfono nuevo. En una instalación nueva no hay nada que perder — pero si ya agregaste recibos ahí, restaurar los sobrescribirá. Así que carga primero y luego sigue.
+  </div>
+
+  <h2><span class="line">También útil</span>Restaurar en el mismo teléfono</h2>
+  <p>Si reiniciaste tu teléfono o reinstalaste la app, los pasos son los mismos que la mitad del teléfono nuevo: <strong>Ajustes &rarr; Restaurar desde copia</strong>, elige tu archivo, confirma. Como restaurar reemplaza todo lo que tienes ahora en Stub, verás la fecha de la copia en la pantalla de confirmación para que siempre sepas exactamente qué estás cargando.</p>
+
+  <h2><span class="line">Buenos hábitos</span>Mantén tu copia a salvo</h2>
+  <ul>
+    <li><strong>Guárdala donde la encuentres.</strong> Enviártela por correo y Google Drive son confiables porque están ligados a tu cuenta, no a tu teléfono.</li>
+    <li><strong>Respalda con regularidad.</strong> Stub te recuerda cada semana; una copia reciente significa menos pérdida si algo pasa.</li>
+    <li><strong>El archivo es simple y portátil.</strong> No tiene contraseña, así que guárdalo donde solo tú puedas abrirlo — tu propio correo o nube, detrás de tu inicio de sesión.</li>
+  </ul>
+
+  <div class="cta">
+    <h3>Tus registros, en tus manos</h3>
+    <p>Sin cuenta, sin servidor. Respalda con un toque, restaura con un toque, y nunca pierdas un año de deducciones.</p>
+    <a class="btn" href="index.html">Volver a stub.</a>
+    <a class="btn ghost" href="support-es.html">Ayuda y preguntas</a>
+  </div>
+
+  <p class="more">Más: <a href="support-es.html">Ayuda y preguntas</a> &middot; <a href="deducciones-repartidores.html">Deducciones para repartidores</a></p>
+
+  <div class="disclaimer">
+    stub. te ayuda a organizar recibos y millas para tus propios registros. No es asesoría fiscal, legal ni contable. Tus datos se guardan en tu dispositivo; las copias son archivos que tú creas y controlas.
+  </div>
+</div>
+</body>
+</html>
