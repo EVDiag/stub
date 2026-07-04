@@ -2,8 +2,10 @@
   "applinks": {
     "details": [
       {
-        "appID": "WVYCZK9F9V.com.stubx.app",
-        "paths": ["/r/*"]
+        "appIDs": ["WVYCZK9F9V.com.stubx.app"],
+        "components": [
+          { "/": "/r/*" }
+        ]
       }
     ]
   }
