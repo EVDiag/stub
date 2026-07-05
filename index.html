@@ -234,6 +234,12 @@
   .legal li { font-size: 15px; line-height: 1.7; margin-bottom: 6px; }
   .legal hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 
+  /* Phone widths: the four-link nav cannot fit - keep brand + Download pill,
+     hide the anchor links (they all live one scroll away anyway). */
+  @media (max-width: 640px) {
+    .nav-links { gap: 14px; }
+    .nav-links a:not(.btn) { display: none; }
+  }
 </style>
     <link rel="alternate" hreflang="en" href="https://stub.evdiag.net/" />
     <link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/" />

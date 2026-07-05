@@ -259,6 +259,12 @@
   .article-cta p { color: rgba(244,237,226,0.7); margin-bottom: 22px; }
   .disclaimer { font-size: 13px; color: var(--muted); margin-top: 40px; line-height: 1.6; font-style: italic; }
 
+  /* Phone widths: the four-link nav cannot fit - keep brand + Download pill,
+     hide the anchor links (they all live one scroll away anyway). */
+  @media (max-width: 640px) {
+    .nav-links { gap: 14px; }
+    .nav-links a:not(.btn) { display: none; }
+  }
 </style>
 </head>
 <body>
