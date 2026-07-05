@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cómo funcionan las millas automáticas — stub.</title>
+<meta name="description" content="Configura la detección de viajes en 2 minutos: qué permisos pide Stub, por qué importa cada uno y qué hace la IA con tus viajes." />
+<link rel="canonical" href="https://stub.evdiag.net/mileage-guide-es.html" />
+    <link rel="alternate" hreflang="en" href="https://stub.evdiag.net/mileage-guide.html" />
+    <link rel="alternate" hreflang="es" href="https://stub.evdiag.net/mileage-guide-es.html" />
+    <link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/mileage-guide.html" />
+<link rel="icon" type="image/png" href="icon-192.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root { --bg:#0E0D0B; --surface:#1A1815; --border:#2A2722; --cream:#F4EDE2; --muted:#9A917F; --gold:#D4A574; --sage:#7FC59B; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--cream); font-family:'Instrument Sans',sans-serif; line-height:1.65; }
+  .wrap { max-width:680px; margin:0 auto; padding:0 24px; }
+  nav { padding:24px 0; } nav a { color:var(--muted); text-decoration:none; font-size:14px; } nav a:hover { color:var(--gold); }
+  .brand { font-family:'Instrument Serif',serif; color:var(--cream); } .brand .dot { color:var(--gold); }
+  h1 { font-family:'Instrument Serif',serif; font-weight:400; font-size:clamp(32px,5vw,44px); line-height:1.15; margin:24px 0 8px; }
+  h1 em { color:var(--gold); }
+  .sub { color:var(--muted); font-size:15px; margin-bottom:32px; }
+  h2 { font-family:'Instrument Serif',serif; font-weight:400; font-size:22px; margin:36px 0 12px; color:var(--gold); }
+  details { background:var(--surface); border:1px solid var(--border); border-radius:14px; margin-bottom:10px; overflow:hidden; }
+  summary { cursor:pointer; padding:16px 18px; font-weight:600; font-size:14.5px; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+  summary::-webkit-details-marker { display:none; }
+  summary::after { content:'+'; color:var(--gold); font-size:18px; flex-shrink:0; }
+  details[open] summary::after { content:'–'; }
+  details p, details ul { color:#CFC6B8; font-size:14px; padding:0 18px 16px; }
+  details ul { margin-left:18px; }
+  details li { margin-bottom:6px; }
+  details a { color:var(--gold); }
+  .contact { background:linear-gradient(180deg,var(--surface),var(--bg)); border:1px solid var(--border); border-radius:20px; padding:28px; margin:44px 0 24px; text-align:center; }
+  .contact h3 { font-family:'Instrument Serif',serif; font-weight:400; font-size:24px; margin-bottom:6px; }
+  .contact p { color:var(--muted); font-size:14px; margin-bottom:14px; }
+  .btn { display:inline-block; background:var(--gold); color:var(--bg); padding:12px 24px; border-radius:999px; font-weight:600; font-size:14px; text-decoration:none; }
+  .disclaimer { color:var(--muted); font-size:12px; border-top:1px solid var(--border); padding:24px 0 48px; margin-top:40px; }
+  .disclaimer a { color:var(--gold); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><a href="es/index.html">&larr; <span class="brand">stub<span class="dot">.</span></span></a></nav>
+
+  <h1>Millas automáticas, <em>explicadas.</em></h1>
+  <p class="sub">Dos minutos de configuración y tu registro de millas se construye solo. Esto es exactamente lo que pasa y por qué existe cada permiso.</p>
+
+  <h2>Cómo funciona</h2>
+  <p>Stub detecta cuando manejas — en segundo plano, con la app cerrada. Al abrir la app, tus viajes esperan en una revisión corta: la IA ya sugirió <strong>negocio o personal</strong> para cada uno, con una razón clara. No adivina viaje por viaje: lee tu día completo — cuánto esperaste entre viajes, patrones de paradas, día de la semana y feriados, y tu propio historial — así una ruta de entregas se lee como una sola, y las razones pueden decir cosas como &ldquo;parte de la misma ruta de entregas que el #2.&rdquo;</p>
+  <p>Confirmas cada viaje con un toque. Confirma el último y el registro se guarda solo. Cada milla de negocio se vuelve deducción del Anexo C a la tarifa estándar del IRS, y un PDF nivel auditoría (fecha, ruta, propósito, odómetro, totales por año) está a un toque en Reportes.</p>
+  <p>Qué sale de tu teléfono: las coordenadas de inicio y fin del viaje y sus estadísticas, enviadas una vez para clasificar. Qué nunca sale: los nombres que das a tus lugares (Casa, Oficina, un cliente) — esos se quedan en tu dispositivo. Detalles en la <a href="es/index.html#privacy" style="color:var(--gold)">política de privacidad</a>.</p>
+
+  <h2>Configúralo (Android)</h2>
+  <p><strong>1. Actívalo</strong> — Pestaña Millas &rarr; <strong>Detección automática de viajes</strong> &rarr; Activar.</p>
+  <p><strong>2. Ubicación: Permitir todo el tiempo</strong> — Los viajes ocurren con la app cerrada — &ldquo;Mientras se usa&rdquo; literalmente no puede verlos. &ldquo;Todo el tiempo&rdquo; es lo que hace que lo automático sea automático.</p>
+  <p><strong>3. Actividad física: Permitir</strong> — Este es el ahorrador de batería. El chip de movimiento de tu teléfono distingue manejar de caminar, así el GPS solo corre durante viajes reales y no todo el día.<br/><em>¿No te lo pidió? Ajustes del teléfono &rarr; Aplicaciones &rarr; Stub &rarr; Permisos &rarr; Actividad física &rarr; Permitir.</em></p>
+  <p><strong>4. Batería: Sin restricciones</strong> — Evita que Android pause la detección a mitad de viaje. Ajustes &rarr; Aplicaciones &rarr; Stub &rarr; Batería &rarr; Sin restricciones.</p>
+
+  <h2>iPhone</h2>
+  <p>Permite Ubicación <strong>Siempre</strong> (con Precisa activada) y <strong>Movimiento y condición física</strong>. iOS puede empezar con &ldquo;Al usar la app&rdquo; y pedir el cambio después de tus primeros viajes — acepta el cambio.</p>
+
+  <h2>Tus primeros viajes</h2>
+  <p>Maneja a algún lugar, regresa, abre la app: la revisión muestra cada viaje con la sugerencia y la razón de la IA. Toca Negocio o Personal en cada uno — el último toque guarda todo y te regresa a Millas.</p>
+  <p>Cuando visitas un lugar seguido, Stub pregunta qué es — anclado al viaje exacto (&ldquo;Este viaje salió de aquí 4 jul &middot; 8:30 AM&rdquo;) para que lo reconozcas al instante. Nombrar lugares afina cada sugerencia futura, y los nombres nunca salen de tu teléfono.</p>
+
+  <h2>Preguntas frecuentes</h2>
+  <details><summary>¿Gasta mucha batería?</summary><p>No — para eso es el permiso de Actividad física. El GPS solo corre mientras realmente manejas; el chip de movimiento (que casi no consume) decide cuándo.</p></details>
+  <details><summary>¿Funciona con la pantalla apagada o la app cerrada?</summary><p>Sí. Exactamente eso permite la ubicación &ldquo;Todo el tiempo&rdquo;.</p></details>
+  <details><summary>Un viaje se dividió en dos / dos viajes se unieron.</summary><p>Paradas de más de 10 minutos terminan un viaje; pausas más cortas (un drive-through, una entrega rápida) quedan dentro. La revisión te deja corregir antes de guardar.</p></details>
+  <details><summary>¿Puedo apagarlo?</summary><p>Cuando quieras — el mismo interruptor en la pestaña Millas. Tus viajes guardados se quedan.</p></details>
+
+  <p style="margin:40px 0 60px"><a href="es/index.html" style="color:var(--gold)">&larr; Volver a stub.</a></p>
+</div>
+</body>
+</html>
