@@ -127,7 +127,76 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/support.html"/>
     <priority>0.6</priority>
   </url>
-  <url><loc>https://stub.evdiag.net/etsy-seller-tax-deductions.html</loc><priority>0.8</priority></url>
+  <url>
+    <loc>https://stub.evdiag.net/mileage-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/mileage-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/mileage-guide-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/mileage-guide.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/mileage-guide-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/mileage-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/mileage-guide-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/mileage-guide.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/backup-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/backup-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/backup-guide-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/backup-guide.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/backup-guide-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/backup-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/backup-guide-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/backup-guide.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/referral.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/referral.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/referral-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/referral.html"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/referral-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/referral.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/referral-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/referral.html"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/referral-credits.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/referral-credits.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/referral-credits-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/referral-credits.html"/>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/referral-credits-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/referral-credits.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/referral-credits-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/referral-credits.html"/>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/terms-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/terms.html"/>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://stub.evdiag.net/terms-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/terms-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/terms.html"/>
+    <priority>0.3</priority>
+  </url>  <url><loc>https://stub.evdiag.net/etsy-seller-tax-deductions.html</loc><priority>0.8</priority></url>
   <url><loc>https://stub.evdiag.net/real-estate-agent-tax-deductions.html</loc><priority>0.8</priority></url>
   <url><loc>https://stub.evdiag.net/content-creator-tax-deductions.html</loc><priority>0.8</priority></url>
   <url><loc>https://stub.evdiag.net/photographer-tax-deductions.html</loc><priority>0.8</priority></url>

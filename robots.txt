@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stub.evdiag.net/sitemap.xml
