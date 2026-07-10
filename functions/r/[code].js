@@ -59,6 +59,12 @@ export async function onRequest(context) {
 <meta name="theme-color" content="#0E0D0B" />
 <meta name="robots" content="noindex" />
 <title>${t.title} — Stub</title>
+<meta property="og:title" content="${t.title}" />
+<meta property="og:description" content="${es ? 'Stub: escáner de recibos y millas con IA para independientes. Canjea el código y obtén un mes de Pro gratis.' : 'Stub: the AI receipt & mileage scanner for the self-employed. Redeem the code for a free month of Pro.'}" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://stub.evdiag.net/og-image.png" />
+<meta property="og:url" content="https://stub.evdiag.net/r/${code}" />
+<meta name="twitter:card" content="summary_large_image" />
 <style>
   :root { --bg:#0E0D0B; --surface:#1A1817; --cream:#F4EDE2; --muted:#8B8278; --gold:#D4A574; --border:#2A2521; }
   * { box-sizing:border-box; margin:0; padding:0; }
