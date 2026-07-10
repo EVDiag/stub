@@ -89,6 +89,7 @@ export async function onRequest(context) {
 <body>
 <div class="wrap">
   <div class="mark">stub<span>.</span></div>
+  <img src="https://stub.evdiag.net/og-image.png" alt="" style="width:min(430px,92%);border-radius:16px;border:1px solid var(--border);margin-bottom:24px" />
   <h1>${t.title}</h1>
   <p class="sub">${t.sub}</p>
   <div class="codebox">
