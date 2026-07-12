@@ -516,7 +516,7 @@
 <section id="privacy" class="legal" style="margin: 0 auto; padding: 80px 28px;">
 
 <h1 style="font-family: 'Instrument Serif'; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 16px;">Privacy Policy</h1>
-<p style="color: var(--muted); margin-bottom: 40px;">Effective date: <strong>July 3, 2026</strong></p>
+<p style="color: var(--muted); margin-bottom: 40px;">Effective date: <strong>July 11, 2026</strong></p>
 
 <p>This Privacy Policy explains how Stub ("we," "us," "the app") handles your information. The short version: most of your data stays on your device, we don't sell anything to anyone, and we only collect what we need to make the app work.</p>
 
@@ -539,6 +539,8 @@
 
 <p>We do not store the receipt image on our servers. The image leaves your device, is processed by the AI, the structured result returns to your device, and that's the end of it.</p>
 
+<p>If you save a receipt in a foreign currency, Stub also fetches that day's exchange rate from <strong>Frankfurter</strong> (frankfurter.dev), an open exchange-rate service based on European Central Bank reference rates, to show an informational USD estimate. That request contains only the currency, the receipt's date, and the amount &mdash; never the vendor, the items, or anything that identifies you.</p>
+
 <h2>4. Location and automatic drive detection</h2>
 <p>Stub can track your drives for mileage deductions. This is <strong>optional and off by default</strong>: you turn it on from the Miles tab, and you can turn it off at any time.</p>
 <p>When automatic drive detection is on, Stub collects your device's <strong>precise location in the background</strong>, including when the app is closed or not in use, to detect and record your drives. Your full route history is stored locally on your device only.</p>
@@ -548,8 +550,12 @@
 <h2>5. Subscriptions and payments</h2>
 <p>When you start a Stub Pro subscription, payment is processed by <strong>Apple</strong> (App Store) or <strong>Google</strong> (Play Store). We never see your credit card number or full billing details.</p>
 <p>We use <strong>RevenueCat</strong> to manage subscription states. RevenueCat's privacy policy: <a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a>.</p>
+<p>Stub has no accounts. To remember your subscription (and any referral rewards) across reinstalls, the app generates a <strong>random identifier</strong> on your device. It contains no personal information and cannot identify you on its own. It's stored on your device, with a secure backup in iOS Keychain or Android Block Store so it survives reinstalling the app, and it is shared with RevenueCat to look up your subscription state.</p>
 
-<h2>6. Information we do NOT collect</h2>
+<h2>6. Referral program</h2>
+<p>If you use the referral program (viewing your referral code, sharing it, or redeeming one), we store a small record on our servers (hosted on Cloudflare) so rewards can be granted and abuse prevented: the random identifier described above, your platform (iOS or Android), the referral code, which identifier referred which, the reward days earned and their status, and timestamps. This record contains <strong>no name, email, location, receipts, or trips</strong>. If you never use the referral feature, no such record is created. You can request deletion of this record at any time (see "Your rights").</p>
+
+<h2>7. Information we do NOT collect</h2>
 <p>For clarity, we do <strong>not</strong> collect any of the following:</p>
 <ul>
   <li>Your name (unless you voluntarily enter one in the app)</li>
@@ -557,21 +563,22 @@
   <li>Your phone number, contacts, photos outside of receipts you scan, calendar, or other device data</li>
 </ul>
 
-<h2>7. Your rights</h2>
+<h2>8. Your rights</h2>
 <p>You have the right to access, delete, export, or object to processing of your data. To exercise any of these rights, email <a href="mailto:service@evdiag.net">service@evdiag.net</a> with the subject line "Privacy Request."</p>
 
-<h2>8. Children's privacy</h2>
+<h2>9. Children's privacy</h2>
 <p>Stub is not directed at children under 13 (or under 16 in EEA/UK). We do not knowingly collect data from children.</p>
 
-<h2>9. International users</h2>
+<h2>10. International users</h2>
 <p>If you are located outside the United States, your data (such as receipt images and trip summaries sent for AI processing) may be transferred to and processed in the United States. By using Stub, you consent to this transfer.</p>
 
-<h2>10. Changes to this policy</h2>
+<h2>11. Changes to this policy</h2>
 <p>If we change this policy, we'll update the "Effective date" above. If the change is material, we'll notify you in-app before the change takes effect.</p>
 
-<h2>11. Contact</h2>
+<h2>12. Contact</h2>
 <p>Stub is built and operated by <strong>Roman Franta</strong>.</p>
 <p>Email: <a href="mailto:service@evdiag.net">service@evdiag.net</a></p>
+<p>If you use the contact form on this website, your message and the email address you provide are delivered to us by <strong>Formspree</strong> (Formspree, Inc.), which processes them solely to route your message to us. Formspree's privacy policy: <a href="https://formspree.io/legal/privacy-policy/" target="_blank">formspree.io/legal/privacy-policy</a>.</p>
 
 <hr>
 
