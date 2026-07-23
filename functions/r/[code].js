@@ -120,7 +120,11 @@ export async function onRequest(context) {
   return new Response(html, {
     headers: {
       'content-type': 'text/html; charset=utf-8',
-      'cache-control': 'public, max-age=300',
+      // Site hygiene (audit 2026-07-23): the body varies by User-Agent (Android/iOS buttons)
+      // and Accept-Language (ES/EN). 'private' stops a SHARED cache (CDN/proxy) from storing
+      // one variant and serving it to a different device/language; Vary declares the variance.
+      'cache-control': 'private, max-age=300',
+      'vary': 'User-Agent, Accept-Language',
       'x-robots-tag': 'noindex',
     },
   });
