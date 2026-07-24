@@ -16,189 +16,189 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/guides.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/guides.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/guias.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/guides.html"/>
+    <loc>https://stub.evdiag.net/guides</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/guides"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/guias"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/guides"/>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/es/guias.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/guides.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/guias.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/guides.html"/>
+    <loc>https://stub.evdiag.net/es/guias</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/guides"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/guias"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/guides"/>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/gig-driver-tax-deductions.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/gig-driver-tax-deductions.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-repartidores.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/gig-driver-tax-deductions.html"/>
+    <loc>https://stub.evdiag.net/gig-driver-tax-deductions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/gig-driver-tax-deductions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-repartidores"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/gig-driver-tax-deductions"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/es/deducciones-repartidores.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/gig-driver-tax-deductions.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-repartidores.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/gig-driver-tax-deductions.html"/>
+    <loc>https://stub.evdiag.net/es/deducciones-repartidores</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/gig-driver-tax-deductions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-repartidores"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/gig-driver-tax-deductions"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/freelancer-tax-deductions-checklist.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/freelancer-tax-deductions-checklist.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-trabajador-independiente.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/freelancer-tax-deductions-checklist.html"/>
+    <loc>https://stub.evdiag.net/freelancer-tax-deductions-checklist</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/freelancer-tax-deductions-checklist"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-trabajador-independiente"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/freelancer-tax-deductions-checklist"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/es/deducciones-trabajador-independiente.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/freelancer-tax-deductions-checklist.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-trabajador-independiente.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/freelancer-tax-deductions-checklist.html"/>
+    <loc>https://stub.evdiag.net/es/deducciones-trabajador-independiente</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/freelancer-tax-deductions-checklist"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-trabajador-independiente"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/freelancer-tax-deductions-checklist"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/handyman-contractor-tax-deductions.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/handyman-contractor-tax-deductions.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-construccion.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/handyman-contractor-tax-deductions.html"/>
+    <loc>https://stub.evdiag.net/handyman-contractor-tax-deductions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/handyman-contractor-tax-deductions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-construccion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/handyman-contractor-tax-deductions"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/es/deducciones-construccion.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/handyman-contractor-tax-deductions.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-construccion.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/handyman-contractor-tax-deductions.html"/>
+    <loc>https://stub.evdiag.net/es/deducciones-construccion</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/handyman-contractor-tax-deductions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-construccion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/handyman-contractor-tax-deductions"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/rideshare-driver-tax-deductions.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/rideshare-driver-tax-deductions.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-conductores.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/rideshare-driver-tax-deductions.html"/>
+    <loc>https://stub.evdiag.net/rideshare-driver-tax-deductions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/rideshare-driver-tax-deductions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-conductores"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/rideshare-driver-tax-deductions"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/es/deducciones-conductores.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/rideshare-driver-tax-deductions.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-conductores.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/rideshare-driver-tax-deductions.html"/>
+    <loc>https://stub.evdiag.net/es/deducciones-conductores</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/rideshare-driver-tax-deductions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-conductores"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/rideshare-driver-tax-deductions"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/hairstylist-barber-tax-deductions.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/hairstylist-barber-tax-deductions.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-estilistas-barberos.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/hairstylist-barber-tax-deductions.html"/>
+    <loc>https://stub.evdiag.net/hairstylist-barber-tax-deductions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/hairstylist-barber-tax-deductions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-estilistas-barberos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/hairstylist-barber-tax-deductions"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/es/deducciones-estilistas-barberos.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/hairstylist-barber-tax-deductions.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-estilistas-barberos.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/hairstylist-barber-tax-deductions.html"/>
+    <loc>https://stub.evdiag.net/es/deducciones-estilistas-barberos</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/hairstylist-barber-tax-deductions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-estilistas-barberos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/hairstylist-barber-tax-deductions"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/house-cleaning-tax-deductions.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/house-cleaning-tax-deductions.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-servicios-limpieza.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/house-cleaning-tax-deductions.html"/>
+    <loc>https://stub.evdiag.net/house-cleaning-tax-deductions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/house-cleaning-tax-deductions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-servicios-limpieza"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/house-cleaning-tax-deductions"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/es/deducciones-servicios-limpieza.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/house-cleaning-tax-deductions.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-servicios-limpieza.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/house-cleaning-tax-deductions.html"/>
+    <loc>https://stub.evdiag.net/es/deducciones-servicios-limpieza</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/house-cleaning-tax-deductions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/es/deducciones-servicios-limpieza"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/house-cleaning-tax-deductions"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/support.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/support.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/support-es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/support.html"/>
+    <loc>https://stub.evdiag.net/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/support-es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/support"/>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/support-es.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/support.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/support-es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/support.html"/>
+    <loc>https://stub.evdiag.net/support-es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/support-es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/support"/>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/mileage-guide.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/mileage-guide.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/mileage-guide-es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/mileage-guide.html"/>
+    <loc>https://stub.evdiag.net/mileage-guide</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/mileage-guide"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/mileage-guide-es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/mileage-guide"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/mileage-guide-es.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/mileage-guide.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/mileage-guide-es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/mileage-guide.html"/>
+    <loc>https://stub.evdiag.net/mileage-guide-es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/mileage-guide"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/mileage-guide-es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/mileage-guide"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/backup-guide.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/backup-guide.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/backup-guide-es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/backup-guide.html"/>
+    <loc>https://stub.evdiag.net/backup-guide</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/backup-guide"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/backup-guide-es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/backup-guide"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/backup-guide-es.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/backup-guide.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/backup-guide-es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/backup-guide.html"/>
+    <loc>https://stub.evdiag.net/backup-guide-es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/backup-guide"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/backup-guide-es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/backup-guide"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/referral.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/referral.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/referral-es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/referral.html"/>
+    <loc>https://stub.evdiag.net/referral</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/referral"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/referral-es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/referral"/>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/referral-es.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/referral.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/referral-es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/referral.html"/>
+    <loc>https://stub.evdiag.net/referral-es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/referral"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/referral-es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/referral"/>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/referral-credits.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/referral-credits.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/referral-credits-es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/referral-credits.html"/>
+    <loc>https://stub.evdiag.net/referral-credits</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/referral-credits"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/referral-credits-es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/referral-credits"/>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/referral-credits-es.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/referral-credits.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/referral-credits-es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/referral-credits.html"/>
+    <loc>https://stub.evdiag.net/referral-credits-es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/referral-credits"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/referral-credits-es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/referral-credits"/>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/terms-es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/terms.html"/>
+    <loc>https://stub.evdiag.net/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/terms-es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/terms"/>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://stub.evdiag.net/terms-es.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/terms-es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/terms.html"/>
+    <loc>https://stub.evdiag.net/terms-es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stub.evdiag.net/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stub.evdiag.net/terms-es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stub.evdiag.net/terms"/>
     <priority>0.3</priority>
-  </url>  <url><loc>https://stub.evdiag.net/etsy-seller-tax-deductions.html</loc><priority>0.8</priority></url>
-  <url><loc>https://stub.evdiag.net/real-estate-agent-tax-deductions.html</loc><priority>0.8</priority></url>
-  <url><loc>https://stub.evdiag.net/content-creator-tax-deductions.html</loc><priority>0.8</priority></url>
-  <url><loc>https://stub.evdiag.net/photographer-tax-deductions.html</loc><priority>0.8</priority></url>
-  <url><loc>https://stub.evdiag.net/trucker-tax-deductions.html</loc><priority>0.8</priority></url>
+  </url>  <url><loc>https://stub.evdiag.net/etsy-seller-tax-deductions</loc><priority>0.8</priority></url>
+  <url><loc>https://stub.evdiag.net/real-estate-agent-tax-deductions</loc><priority>0.8</priority></url>
+  <url><loc>https://stub.evdiag.net/content-creator-tax-deductions</loc><priority>0.8</priority></url>
+  <url><loc>https://stub.evdiag.net/photographer-tax-deductions</loc><priority>0.8</priority></url>
+  <url><loc>https://stub.evdiag.net/trucker-tax-deductions</loc><priority>0.8</priority></url>
 </urlset>
