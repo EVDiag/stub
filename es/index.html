@@ -434,7 +434,7 @@
 <section id="privacy" class="legal" style="margin: 0 auto; padding: 80px 28px;">
 
 <h1 style="font-family: 'Instrument Serif'; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 16px;">Política de privacidad</h1>
-<p style="color: var(--muted); margin-bottom: 40px;">Fecha de entrada en vigor: <strong>11 de julio de 2026</strong></p>
+<p style="color: var(--muted); margin-bottom: 40px;">Fecha de entrada en vigor: <strong>24 de julio de 2026</strong></p>
 
 <p>Esta Política de privacidad explica cómo Stub ("nosotros", "la app") maneja tu información. En resumen: la mayoría de tus datos se quedan en tu dispositivo, no le vendemos nada a nadie y solo recopilamos lo necesario para que la app funcione.</p>
 
@@ -443,14 +443,15 @@
 <h2>1. Qué hace Stub</h2>
 <p>Stub es una app de escaneo de recibos y registro de impuestos para trabajadores independientes. Apuntas la cámara a un recibo, la app usa IA para leerlo y guarda los datos extraídos para que los uses en tus deducciones de impuestos.</p>
 
-<h2>2. Información almacenada en tu dispositivo</h2>
-<p>Lo siguiente se guarda <strong>solo localmente en tu dispositivo</strong> y nunca se nos envía:</p>
+<h2>2. Información almacenada en tu dispositivo y en tu propia nube</h2>
+<p>Lo siguiente se guarda <strong>en tu dispositivo</strong> y nunca se nos envía:</p>
 <ul>
   <li>Los recibos que escaneas (imagen, comercio, monto, fecha, artículos, categoría, notas)</li>
   <li>Los viajes de millaje y rutas GPS que registras (manualmente o con la detección automática de trayectos)</li>
   <li>El estado de introducción y los ajustes de la app</li>
 </ul>
-<p>Puedes eliminar todo esto en cualquier momento desde la app o desinstalando Stub.</p>
+<p><strong>Copia de seguridad y sincronización &mdash; tu propia nube, no la nuestra.</strong> Para que tus registros sobrevivan a un teléfono perdido, restablecido o nuevo, Stub también respalda estos datos (registros, fotos de recibos y rutas de viajes) en almacenamiento que te pertenece a <em>ti</em>: en iOS, la base de datos privada de tu iCloud, usada automáticamente mientras tu teléfono tenga sesión iniciada en iCloud; en Android, un área oculta de datos de app en tu propio Google Drive, usada solo después de tocar «Respaldar en Google Drive» y conceder acceso. Apple o Google guardan esa copia como <em>tu</em> proveedor de almacenamiento bajo sus propias políticas de privacidad &mdash; nunca la recibimos, no podemos acceder a ella y no operamos ningún servidor que almacene tus datos. Para mantener todo solo en el dispositivo, no inicies sesión en iCloud (iOS) o simplemente nunca conectes Google Drive (Android).</p>
+<p><strong>Eliminar tus datos.</strong> «Eliminar todos los datos» en Ajustes borra todo de tu teléfono <em>y</em>, cuando la copia y sincronización está activada, elimina los registros sincronizados de tu copia en iCloud o Google Drive y de tus otros dispositivos sincronizados en su próxima sincronización. Desinstalar la app por sí solo <strong>no</strong> elimina la copia en la nube &mdash; reinstalar restaura desde ella, que es exactamente para lo que existe la copia. Una pequeña cantidad de datos de archivo sobrantes de elementos ya eliminados puede permanecer en tu propio almacenamiento en la nube; no es visible en la app y queda en almacenamiento que solo tú controlas.</p>
 
 <h2>3. Información enviada a terceros cuando usas las funciones de IA</h2>
 <p>Cuando escaneas un recibo, Stub envía la imagen del recibo a un proveedor de IA externo (Anthropic) para extraer el comercio, el monto, los artículos y la categoría fiscal. La imagen se procesa y se devuelve una respuesta estructurada. Anthropic no conserva las imágenes de tus recibos para fines de entrenamiento. Puedes leer la política de Anthropic en <a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a>.</p>
@@ -461,7 +462,7 @@
 
 <h2>4. Ubicación y detección automática de trayectos</h2>
 <p>Stub puede registrar tus trayectos para las deducciones por millaje. Esto es <strong>opcional y está desactivado de forma predeterminada</strong>: lo activas desde la pestaña Millas y puedes desactivarlo cuando quieras.</p>
-<p>Cuando la detección automática de trayectos está activada, Stub recopila la <strong>ubicación precisa de tu dispositivo en segundo plano</strong>, incluso cuando la app está cerrada o no se usa, para detectar y registrar tus trayectos. El historial completo de tus rutas se guarda solo localmente en tu dispositivo.</p>
+<p>Cuando la detección automática de trayectos está activada, Stub recopila la <strong>ubicación precisa de tu dispositivo en segundo plano</strong>, incluso cuando la app está cerrada o no se usa, para detectar y registrar tus trayectos. El historial completo de tus rutas se guarda en tu dispositivo y, cuando la copia y sincronización está activada, en tu propia copia de iCloud o Google Drive (ver sección 2) &mdash; nunca en nuestros servidores.</p>
 <p>Para sugerir si cada trayecto detectado fue de negocio o personal, Stub envía un pequeño resumen del trayecto al mismo proveedor de IA externo (Anthropic): las <strong>coordenadas de inicio y fin</strong> del trayecto, la fecha y hora del día, la distancia, la duración y el patrón de conducción. Si le pusiste nombre a un lugar guardado (como Casa u Oficina), ese nombre también se incluye para que la sugerencia sea más precisa. Para mostrar nombres legibles en las paradas que no has nombrado, Stub también envía las coordenadas de los extremos del trayecto a <strong>Google Maps Platform</strong> (Google LLC), que devuelve la dirección o el nombre del negocio cercano; estas consultas se detienen por completo en el Modo de ubicación privada. Puedes activar el Modo de ubicación privada (Ajustes &rsaquo; Privacidad) para enviar solo ubicaciones aproximadas y ningún nombre de lugar &mdash; más privado, pero las sugerencias se vuelven menos precisas. La IA devuelve una sugerencia y tú confirmas cada trayecto. No guardamos tu ubicación en nuestros servidores, y tu ubicación nunca se vende ni se usa para publicidad.</p>
 <p>El registrador manual de trayectos por GPS funciona igual: la ruta registrada se guarda en tu dispositivo.</p>
 

@@ -516,7 +516,7 @@
 <section id="privacy" class="legal" style="margin: 0 auto; padding: 80px 28px;">
 
 <h1 style="font-family: 'Instrument Serif'; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 16px;">Privacy Policy</h1>
-<p style="color: var(--muted); margin-bottom: 40px;">Effective date: <strong>July 11, 2026</strong></p>
+<p style="color: var(--muted); margin-bottom: 40px;">Effective date: <strong>July 24, 2026</strong></p>
 
 <p>This Privacy Policy explains how Stub ("we," "us," "the app") handles your information. The short version: most of your data stays on your device, we don't sell anything to anyone, and we only collect what we need to make the app work.</p>
 
@@ -525,14 +525,15 @@
 <h2>1. What Stub does</h2>
 <p>Stub is a receipt-scanning and tax-tracking app for self-employed people. You point your camera at a receipt, the app uses AI to read it, and it stores the extracted data so you can use it for tax deductions.</p>
 
-<h2>2. Information stored on your device</h2>
-<p>The following is stored <strong>locally on your device only</strong> and is never sent to us:</p>
+<h2>2. Information stored on your device and in your own cloud backup</h2>
+<p>The following is stored <strong>on your device</strong> and is never sent to us:</p>
 <ul>
   <li>Receipts you scan (image, vendor, amount, date, items, category, notes)</li>
   <li>Mileage trips and GPS routes you record (manually or with automatic drive detection)</li>
   <li>Onboarding state and app settings</li>
 </ul>
-<p>You can delete all of this at any time from within the app, or by uninstalling Stub.</p>
+<p><strong>Backup &amp; sync &mdash; your own cloud, not ours.</strong> So your records survive a lost, reset, or new phone, Stub also backs this data up (records, receipt photos, and trip routes) to storage that belongs to <em>you</em>: on iOS, your iCloud's private database, used automatically while your phone is signed into iCloud; on Android, a hidden app-data area of your own Google Drive, used only after you tap "Back up to Google Drive" and grant access. Apple or Google hold that copy as <em>your</em> storage provider under their own privacy policies &mdash; we never receive it, we cannot access it, and we run no server that stores your data. To keep everything device-only, stay signed out of iCloud (iOS) or simply never connect Google Drive (Android).</p>
+<p><strong>Deleting your data.</strong> "Delete all data" in Settings removes everything from your phone <em>and</em>, when backup &amp; sync is on, deletes the synced records from your iCloud or Google Drive backup and from your other synced devices on their next sync. Uninstalling the app alone does <strong>not</strong> delete the cloud backup &mdash; reinstalling restores from it, which is exactly what the backup is for. A small amount of leftover file data from previously deleted items can remain in your own cloud storage; it is not visible in the app and stays in storage only you control.</p>
 
 <h2>3. Information sent to third parties when you use AI features</h2>
 <p>When you scan a receipt, Stub sends the receipt image to a third-party AI provider (Anthropic) to extract the vendor, amount, items, and tax category. The image is processed and a structured response is returned. Anthropic does not retain your receipt images for training purposes. You can read Anthropic's policy at <a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a>.</p>
@@ -543,7 +544,7 @@
 
 <h2>4. Location and automatic drive detection</h2>
 <p>Stub can track your drives for mileage deductions. This is <strong>optional and off by default</strong>: you turn it on from the Miles tab, and you can turn it off at any time.</p>
-<p>When automatic drive detection is on, Stub collects your device's <strong>precise location in the background</strong>, including when the app is closed or not in use, to detect and record your drives. Your full route history is stored locally on your device only.</p>
+<p>When automatic drive detection is on, Stub collects your device's <strong>precise location in the background</strong>, including when the app is closed or not in use, to detect and record your drives. Your full route history is stored on your device and, when backup &amp; sync is on, in your own iCloud or Google Drive backup (see section 2) &mdash; never on our servers.</p>
 <p>To suggest whether each detected trip was business or personal, Stub sends a small summary of the trip to the same third-party AI provider (Anthropic): the trip's <strong>start and end coordinates</strong>, date and time of day, distance, duration, and driving pattern. If you've named a saved place (like Home or Office), that name is included too so the suggestion is sharper. To show readable place names for stops you haven't named, Stub also sends trip endpoint coordinates to <strong>Google Maps Platform</strong> (Google LLC), which returns the nearby street address or business name; these lookups stop entirely in Private location mode. You can turn on Private location mode (Settings &rsaquo; Privacy) to send only approximate locations and no place names &mdash; more private, but the suggestions become less accurate. The AI returns a suggestion, and you confirm every trip yourself. We do not store your location on our servers, and your location is never sold or used for advertising.</p>
 <p>The manual GPS trip recorder works the same way: the recorded route is stored on your device.</p>
 
