@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0E0D0B" />
 <title>Support &amp; FAQ — stub.</title>
-<meta name="description" content="Answers about Stub: scans, subscriptions, restoring purchases, editing receipts, exports, and your data. Contact support if you're still stuck." />
+<meta name="description" content="Questions, bugs and ideas about Stub: send a message from this page or write to support@evdiag.net. Answers about scans, subscriptions, exports and your data." />
 <link rel="canonical" href="https://stub.evdiag.net/support" />
     <link rel="alternate" hreflang="en" href="https://stub.evdiag.net/support" />
     <link rel="alternate" hreflang="es" href="https://stub.evdiag.net/support-es" />
@@ -43,16 +44,74 @@
   .btn { display:inline-block; background:var(--gold); color:var(--bg); padding:12px 24px; border-radius:999px; font-weight:600; font-size:14px; text-decoration:none; }
   .disclaimer { color:var(--muted); font-size:12px; border-top:1px solid var(--border); padding:24px 0 48px; margin-top:40px; }
   .disclaimer a { color:var(--gold); }
+  .skip { position:absolute; left:-9999px; }
+  .skip:focus { left:16px; top:16px; background:var(--gold); color:var(--bg); padding:8px 12px; border-radius:8px; z-index:10; }
+  nav { display:flex; justify-content:space-between; align-items:center; gap:8px 16px; flex-wrap:wrap; }
+  .navlinks a { margin-left:14px; }
+  .navlinks a:first-child { margin-left:0; }
+  h3.grp { font-family:'Instrument Serif',serif; font-weight:400; font-size:20px; margin:28px 0 12px; color:var(--cream); }
+  .lead { color:#CFC6B8; font-size:14.5px; margin-bottom:16px; }
+  .cf { position:relative; background:var(--surface); border:1px solid var(--border); border-radius:18px; padding:22px; display:flex; flex-direction:column; }
+  .cf label { font-size:13.5px; font-weight:600; margin:16px 0 6px; }
+  .cf label:first-child { margin-top:0; }
+  .cf .opt { color:var(--muted); font-weight:400; }
+  .cf input, .cf select, .cf textarea { background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:11px 12px; color:var(--cream); font-family:inherit; font-size:15px; width:100%; }
+  .cf input:focus, .cf select:focus, .cf textarea:focus { outline:2px solid var(--gold); outline-offset:1px; border-color:var(--gold); }
+  .cf textarea { resize:vertical; min-height:130px; }
+  .hint { color:var(--muted); font-size:12.5px; margin-top:6px; }
+  .hint a { color:var(--gold); }
+  .cf .hp { position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+  .cf button { margin-top:18px; align-self:flex-start; border:none; cursor:pointer; font-family:inherit; }
+  .cf button:disabled { opacity:.55; cursor:default; }
+  .status { min-height:1.4em; margin-top:12px; font-size:14px; }
+  .status.ok { color:var(--sage); }
+  .status.err { color:#E8907A; }
+  .rate { display:flex; flex-wrap:wrap; gap:10px; }
+  .btn.ghost { background:transparent; color:var(--cream); border:1px solid var(--border); }
+  .btn.ghost:hover { border-color:var(--gold); }
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
-  <nav><a href="index.html">← <span class="brand">stub<span class="dot">.</span></span></a></nav>
+  <nav><a href="index.html">← <span class="brand">stub<span class="dot">.</span></span></a><span class="navlinks"><a href="#feedback">Write to us</a><a href="#faq">Questions</a><a href="support-es.html" hreflang="es" lang="es">Español</a></span></nav>
 
-  <h1>Support &amp; <em>FAQ</em></h1>
-  <p class="sub">Most questions are answered below — billing, scans, exports, and your data. Still stuck? Email is at the bottom.</p>
+<main id="main">
+  <h1>Questions, bugs <em>and ideas</em></h1>
+  <p class="sub">A person (the developer, actually) reads every message and usually answers within 1–2 business days. Many answers are already in the questions below.</p>
 
-  <h2>Scanning</h2>
+  <section id="feedback" aria-labelledby="h-form">
+  <h2 id="h-form">Send a message</h2>
+  <p class="lead">Tell us what you were doing and what you expected. If it is about the app, your phone model helps us find it.</p>
+  <form class="cf" id="contactForm" novalidate>
+    <label for="cf-name">Your name <span class="opt">(optional)</span></label>
+    <input id="cf-name" name="name" type="text" autocomplete="name" maxlength="120" />
+    <label for="cf-email">Your email</label>
+    <input id="cf-email" name="email" type="email" autocomplete="email" maxlength="200" required aria-describedby="cf-email-hint" />
+    <p class="hint" id="cf-email-hint">So we can reply. Used for nothing else.</p>
+    <label for="cf-topic">What is it about?</label>
+    <select id="cf-topic" name="topic">
+      <option value="A question">A question</option>
+      <option value="Something is wrong / a bug">Something is wrong / a bug</option>
+      <option value="An idea or suggestion">An idea or suggestion</option>
+      <option value="Subscription or billing">Subscription or billing</option>
+      <option value="Something else">Something else</option>
+    </select>
+    <label for="cf-message">Your message</label>
+    <textarea id="cf-message" name="message" rows="6" maxlength="5000" required></textarea>
+    <div class="hp" aria-hidden="true">
+      <label for="hp_check">Leave this field empty</label>
+      <input type="text" id="hp_check" name="hp_check" tabindex="-1" autocomplete="off" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" />
+    </div>
+    <button type="submit" class="btn">Send message</button>
+    <p class="status" id="cf-status" role="status" aria-live="polite"></p>
+    <p class="hint">We use your email only to answer you. <a href="index.html#privacy">Privacy policy</a></p>
+  </form>
+  <noscript><p class="hint">The form needs JavaScript — or write to <a href="mailto:support@evdiag.net?subject=Stub%20support">support@evdiag.net</a>.</p></noscript>
+  </section>
+
+  <h2 id="faq">Common questions</h2>
+  <h3 class="grp">Scanning</h3>
   <details>
     <summary>How does receipt scanning work?</summary>
     <p>Snap a photo (or pick one from your library). Stub's AI reads the receipt — even crumpled, faded, or blurry — extracts the vendor, amount, and line items, decides whether it's deductible, and assigns the matching Schedule C line with a confidence score and a short explanation of its reasoning.</p>
@@ -74,7 +133,7 @@
     <p>15 per month, resetting on the 1st. Everything else — tracking, editing, the Schedule C summary — stays available regardless.</p>
   </details>
 
-  <h2>Subscription &amp; billing</h2>
+  <h3 class="grp">Subscription &amp; billing</h3>
   <details>
     <summary>What does Pro include, and what does it cost?</summary>
     <p>Pro removes the monthly caps — unlimited receipt scans and unlimited AI-sorted trips: $11.99/month or $79/year, with a 7-day free trial for new subscribers. Billing is handled entirely by Apple or Google — Stub never sees your payment details. Exports (CSV, Schedule C summary, mileage log, full ZIP) are included free for everyone.</p>
@@ -97,110 +156,74 @@
     <p>Open Settings inside the app and tap "Restore purchases" while signed into the same Apple ID or Google account you bought with. Your Pro status comes straight back.</p>
   </details>
 
-  <h2>Your data &amp; privacy</h2>
+  <h3 class="grp">Your data &amp; privacy</h3>
   <details>
     <summary>Where are my receipts stored?</summary>
-    <p>On your device. Stub has no accounts and no cloud database — your receipt history lives locally. When you scan, the photo is sent securely for AI processing and isn't retained as part of any profile about you. The full policy is in our <a href="index.html#privacy">privacy policy</a>.</p>
+    <p>On your device, and in a backup that belongs to you: your own iCloud on iPhone, or your own Google Drive on Android once you turn it on. Stub has no accounts and runs no server that stores your receipts. When you scan, the photo is sent securely for AI processing and isn't retained as part of any profile about you. The full policy is in our <a href="index.html#privacy">privacy policy</a>.</p>
   </details>
   <details>
     <summary>How do I delete my data?</summary>
-    <p>Delete individual receipts from their detail screen. Because everything is stored on-device, uninstalling the app removes all of it — there's no server copy to chase.</p>
+    <p>Delete individual receipts from their detail screen. "Delete all data" in Settings removes everything from your phone and, when backup &amp; sync is on, from your iCloud or Google Drive backup too. Uninstalling the app alone does <strong>not</strong> delete that backup — reinstalling restores from it.</p>
   </details>
   <details>
     <summary>Is Stub tax advice?</summary>
     <p>No. Stub is a record-keeping tool with educational guidance. The AI's category and Schedule C suggestions are starting points, not professional advice — confirm anything significant with a tax professional or at irs.gov.</p>
   </details>
 
-  <h2>Exports</h2>
+  <h3 class="grp">Exports</h3>
   <details>
     <summary>How do I get my data to my accountant?</summary>
     <p>Reports tab → "Export CSV for your accountant" shares a clean spreadsheet of every receipt with dates, amounts, categories, and Schedule C lines — free for everyone. The "Schedule C summary" PDF gives grouped totals per line, and "Export everything (ZIP)" bundles the CSV with your receipt photos.</p>
   </details>
 
-  <div class="contact">
-    <h3>Still stuck?</h3>
-    <p>Email us and a human (the developer, actually) will get back to you, usually within 1–2 business days.</p>
-    <a class="btn" href="mailto:service@evdiag.net?subject=Stub%20support">service@evdiag.net</a>
-  </div>
 
-  <p class="disclaimer">stub. — AI receipt scanner &amp; deduction tracker for the self-employed. <a href="index.html">Home</a> · <a href="guides.html">Tax guides</a> · <a href="index.html#privacy">Privacy policy</a></p>
+  <section id="rate" aria-labelledby="h-rate">
+  <h2 id="h-rate">Rate the app</h2>
+  <p class="lead">If Stub saves you time at tax time, a few words in the store help other self-employed people find it.</p>
+  <p class="rate"><a class="btn ghost" href="https://apps.apple.com/app/id6778758310?action=write-review" rel="noopener">Rate it on the App Store</a> <a class="btn ghost" href="https://play.google.com/store/apps/details?id=com.stubx.app" rel="noopener">Rate it on Google Play</a></p>
+  </section>
+
+  <div class="contact">
+    <h3>Prefer email?</h3>
+    <p>Write to us directly and a person will answer, usually within 1–2 business days.</p>
+    <a class="btn" href="mailto:support@evdiag.net?subject=Stub%20support">support@evdiag.net</a>
+  </div>
+</main>
+
+  <p class="disclaimer">stub. — AI receipt scanner &amp; deduction tracker for the self-employed. <a href="index.html">Home</a> · <a href="guides.html">Tax guides</a> · <a href="index.html#privacy">Privacy policy</a> · <a href="terms.html">Terms</a> · <a href="support-es.html">Español</a></p>
 </div>
 
-<!-- ============================================================================
-     STUB FEEDBACK SECTION  —  paste this whole block inside the <body> of
-     support.html (a good spot is just before the closing </body> or footer).
-     One thing to change: endpoint below is already set to your Formspree form (xojzzwzy). No edit needed —
-     just paste this block in.
-     The class names are namespaced (stub-fb__*) so they won't clash with the page.
-============================================================================ -->
-<section id="feedback" class="stub-fb">
-  <h2 class="stub-fb__title">Send us feedback</h2>
-  <p class="stub-fb__sub">Found a bug, or have an idea to make Stub better? Tell us — we read everything.</p>
-
-  <form id="stub-fb-form" class="stub-fb__form" novalidate>
-    <input type="hidden" name="_subject" value="Stub app — feedback">
-    <input type="hidden" name="source" value="support page">
-
-    <label class="stub-fb__label" for="stub-fb-type">Type</label>
-    <select id="stub-fb-type" name="type" class="stub-fb__input">
-      <option>Suggestion</option>
-      <option>Bug / something broke</option>
-      <option>Question</option>
-      <option>Other</option>
-    </select>
-
-    <label class="stub-fb__label" for="stub-fb-msg">Your feedback</label>
-    <textarea id="stub-fb-msg" name="message" rows="5" required class="stub-fb__input"
-              placeholder="What's working, what's not, what you'd love to see…"></textarea>
-
-    <label class="stub-fb__label" for="stub-fb-email">Email <span class="stub-fb__opt">(optional — only if you'd like a reply)</span></label>
-    <input id="stub-fb-email" name="email" type="email" class="stub-fb__input" placeholder="you@example.com">
-
-    <button type="submit" class="stub-fb__btn">Send feedback</button>
-    <p id="stub-fb-status" class="stub-fb__status" role="status" aria-live="polite"></p>
-  </form>
-</section>
-
-<style>
-  /* Colors are the Stub palette — tweak the three hex values if your page differs. */
-  .stub-fb { max-width: 560px; margin: 56px auto; padding: 0 20px; font-family: inherit; }
-  .stub-fb__title { font-size: 1.5rem; font-weight: 700; color: #E8C572; margin: 0 0 8px; } /* gold  */
-  .stub-fb__sub   { color: #c9c4ba; margin: 0 0 22px; line-height: 1.55; }                  /* muted */
-  .stub-fb__form  { display: flex; flex-direction: column; gap: 6px; }
-  .stub-fb__label { color: #f3efe6; font-size: .85rem; font-weight: 600; margin-top: 14px; } /* cream */
-  .stub-fb__opt   { color: #8f8a80; font-weight: 400; }
-  .stub-fb__input { background: #1b1b1b; border: 1px solid #353535; border-radius: 10px;
-                    padding: 12px; color: #f3efe6; font-size: 1rem; font-family: inherit; width: 100%; box-sizing: border-box; }
-  .stub-fb__input:focus { outline: none; border-color: #E8C572; }
-  textarea.stub-fb__input { resize: vertical; }
-  .stub-fb__btn { margin-top: 18px; align-self: flex-start; background: #E8C572; color: #171717;
-                  border: none; border-radius: 999px; padding: 12px 26px; font-weight: 600;
-                  font-size: 1rem; cursor: pointer; }
-  .stub-fb__btn:disabled { opacity: .5; cursor: default; }
-  .stub-fb__status { margin-top: 12px; font-size: .9rem; min-height: 1.2em; }
-</style>
-
 <script>
-  (function () {
-    var ENDPOINT = 'https://formspree.io/f/xojzzwzy'; /* your Formspree form — already set */
-    var form = document.getElementById('stub-fb-form');
-    var status = document.getElementById('stub-fb-status');
-    var btn = form.querySelector('.stub-fb__btn');
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (!form.message.value.trim()) { status.style.color = '#E07A5F'; status.textContent = 'Please add a short message first.'; return; }
-      btn.disabled = true; status.style.color = '#c9c4ba'; status.textContent = 'Sending…';
-      fetch(ENDPOINT, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
-        .then(function (r) {
-          if (r.ok) { form.reset(); status.style.color = '#7CC36E'; status.textContent = 'Thank you — your feedback was sent.'; }
-          else { status.style.color = '#E07A5F'; status.textContent = 'Something went wrong. Please try again.'; }
-        })
-        .catch(function () { status.style.color = '#E07A5F'; status.textContent = 'Network error — please try again.'; })
-        .finally(function () { btn.disabled = false; });
-    });
-  })();
+(function () {
+  var form = document.getElementById('contactForm');
+  if (!form) return;
+  var status = document.getElementById('cf-status');
+  var btn = form.querySelector('button[type=submit]');
+  var T = {"sending": "Sending…", "sent": "Thank you — your message was sent. We will answer by email.", "missing": "Please add your email and a message.", "bad_email": "That email address does not look right.", "too_short": "Please add a little more detail so we can help.", "spam_check": "The spam check failed. Please reload the page and try again.", "fallback": "We could not send that just now. Please write to support@evdiag.net.", "network": "No connection. Please try again, or write to support@evdiag.net."};
+  var LANG = 'en';
+  function field(n) { return form.elements.namedItem(n); }
+  function show(msg, kind) { status.textContent = msg; status.className = 'status' + (kind ? ' ' + kind : ''); }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = field('email').value.trim(), message = field('message').value.trim();
+    if (!email || !message) { show(T.missing, 'err'); return; }
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(email)) { show(T.bad_email, 'err'); return; }
+    if (message.length < 10) { show(T.too_short, 'err'); return; }
+    btn.disabled = true; show(T.sending, '');
+    var payload = { name: field('name').value, email: email, topic: field('topic').value,
+                    message: field('message').value, hp_check: field('hp_check').value, lang: LANG };
+    fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                            body: JSON.stringify(payload) })
+      .then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (d) { return { ok: r.ok && d.ok === true, d: d || {} }; });
+      })
+      .then(function (x) {
+        if (x.ok) { form.reset(); show(T.sent, 'ok'); }
+        else { show(T[x.d.code] || T.fallback, 'err'); }
+      }, function () { show(T.network, 'err'); })
+      .then(function () { btn.disabled = false; });
+  });
+})();
 </script>
-<!-- ===================== END STUB FEEDBACK SECTION ===================== -->
-
 </body>
 </html>
