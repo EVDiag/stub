@@ -62,7 +62,7 @@ export async function onRequest(context) {
 <meta property="og:title" content="${t.title}" />
 <meta property="og:description" content="${es ? 'Stub: escáner de recibos y millas con IA para independientes. Canjea el código y obtén un mes de Pro gratis.' : 'Stub: the AI receipt & mileage scanner for the self-employed. Redeem the code for a free month of Pro.'}" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://stub.evdiag.net/og-image.png" />
+<meta property="og:image" content="https://stub.evdiag.net/og-image.png?v=2" />
 <meta property="og:url" content="https://stub.evdiag.net/r/${code}" />
 <meta name="twitter:card" content="summary_large_image" />
 <style>
@@ -89,7 +89,7 @@ export async function onRequest(context) {
 <body>
 <div class="wrap">
   <div class="mark">stub<span>.</span></div>
-  <img src="https://stub.evdiag.net/og-image.png" alt="" style="width:min(430px,92%);border-radius:16px;border:1px solid var(--border);margin-bottom:24px" />
+  <img src="https://stub.evdiag.net/og-image.png?v=2" alt="" style="width:min(430px,92%);border-radius:16px;border:1px solid var(--border);margin-bottom:24px" />
   <h1>${t.title}</h1>
   <p class="sub">${t.sub}</p>
   <div class="codebox">
