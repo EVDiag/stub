@@ -49,6 +49,8 @@
   .nav-links { display: flex; gap: 28px; align-items: center; }
   .nav-links a { color: var(--muted); font-size: 14px; }
   .nav-links a.btn { color: var(--bg); background: var(--cream); padding: 10px 18px; border-radius: 999px; font-weight: 600; }
+  .nav-links a.nav-support { color: var(--gold); border: 1px solid var(--gold); padding: 9px 17px; border-radius: 999px; font-weight: 600; }
+  .nav-links a.nav-support:hover { color: var(--bg); background: var(--gold); }
 
   /* Hero */
   .hero { padding: 60px 0 100px; position: relative; }
@@ -255,6 +257,10 @@
   .article-cta p { color: rgba(244,237,226,0.7); margin-bottom: 22px; }
   .disclaimer { font-size: 13px; color: var(--muted); margin-top: 40px; line-height: 1.6; font-style: italic; }
 
+  @media (max-width: 640px) {
+    .nav-links { gap: 14px; }
+    .nav-links a:not(.btn):not(.nav-support) { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -266,6 +272,7 @@
       <a href="/es/#features">Funciones</a>
       <a href="/es/#pricing">Precios</a>
       <a href="/es/guias.html">Guías</a>
+      <a href="/support-es.html" class="nav-support">Soporte</a>
       <a href="/es/#download" class="btn">Descargar</a>
     </div>
   </div>
@@ -321,7 +328,7 @@
     <div class="foot-links">
       <a href="/es/#privacy">Privacidad</a>
       <a href="/terms-es.html">Términos</a>
-      <a href="mailto:support@evdiag.net">Soporte</a>
+      <a href="/support-es.html">Soporte</a>
       <a href="https://apps.apple.com/app/id6778758310">App Store</a>
       <a href="https://play.google.com/store/apps/details?id=com.stubx.app">Google Play</a>
       <a href="/guides.html">English</a>
